@@ -1,117 +1,206 @@
-/* html {
-  /* background-color: black; */
-/* } */
-*/
+:root {
+  --nav-bar-background-color: black;
+  --text-color: rgba(255, 255, 255, 0.763);
+  --font-family: sans-serif;
+  --font-weight: 650;
+  --background-color: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: var(--background-color);
+}
+
+.hidden {
+  display: none;
+}
 
 /* NAV BAR  */
+
 .nav-bar {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  height: 10vh;
   width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  position: fixed;
 }
 
 .nav-link-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   list-style: none;
-  width: 50%;
-  font-size: 1.5rem;
-  /* color: white; */
+  width: 75%;
+  height: 100%;
+  align-items: center;
+  font-size: 1.75rem;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  color: var(--text-color);
 }
 
 .nav-bar-logo {
-  width: 5%;
   border-radius: 100%;
+  object-fit: cover;
+  height: 80%;
+  opacity: 0.7;
 }
 
-/* SECTION 1  */
+/* NAV BAR END  */
+
+/* SECTION 1 START  */
+
 .section-1-content {
-  height: 90vh;
-  display: flex;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
 }
 
 .profile-pic {
-  height: 90vh;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
 }
 
 .slogan {
-  font-size: 5rem;
-  color: green;
-  padding: 15vw;
-  display: flex;
-  align-items: center;
-  background-color: black;
+  font-size: 8rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.853);
+  margin-top: -600px;
+  z-index: 1;
+  text-shadow: 4px 4px 0 black;
 }
 
-/* SECTION 2 */
+/* SECTION 1 END  */
+
+/* SECTION 2 START  */
+
 .section-2 {
-  background-color: black;
-}
-
-.weddings-part,
-.birthdays-part {
-  display: flex;
-  margin: 5vw 10vw;
+  height: 130vh;
+  gap: 5%;
+  background-color: rgba(40, 39, 39, 0.322);
+  padding-top: 2rem;
 }
 
 .section-2-heading {
-  font-size: 2rem;
-  color: green;
+  margin: 0 2rem 2rem 0;
+  font-size: 3rem;
 }
 
 .section-2-paragraph {
-  color: green;
-  font-size: 1.5rem;
-}
-
-.wedding-part-writing,
-.birthdays-part-writing {
-  margin-right: 5vw;
-  width: 50%;
+  line-height: 2rem;
 }
 
 .section-2-btn {
-  width: 10vw;
-  height: 4vh;
-  font-size: 1.2rem;
-  margin-top: 1vh;
-  background-color: green;
+  width: 15rem;
+  font-size: 1.5rem;
+  aspect-ratio: 5;
+  margin-top: 1.5rem;
 }
 
-/* SLIDER SECTION  */
+.weddings-part {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.wedding-part-writing {
+  width: 30%;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  font-weight: var(--font-weight);
+}
+
+.wedding-party-pic {
+  width: 30%;
+  height: 80%;
+  margin: 2rem;
+  border: 5px solid grey;
+}
+
+.birthdays-part {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.birthday-part-writing {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  width: 30%;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  font-weight: var(--font-weight);
+}
+
+.birthday-party-pic {
+  width: 30%;
+  border: 5px solid grey;
+  margin: 2rem;
+  height: 80%;
+}
+/* SECTION 2 END  */
+
+.section-3 {
+  background-color: var(--background-color);
+  margin-top: 5rem;
+}
+
+.silder-writing {
+  text-align: center;
+  font-size: 3rem;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  color: var(--text-color);
+  margin-bottom: 5rem;
+}
+
 .slider {
   display: flex;
-  border: 2px solid green;
+  margin-bottom: 5rem;
+}
+
+.slider-pic {
+  width: 60rem;
 }
 
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: black;
-  margin-top: 10vh;
-}
-
-.footer-logo {
-  width: 10%;
-  border-radius: 100%;
-}
-
-.media-icon-container {
-  display: flex;
-  justify-content: center;
-  width: 50%;
-}
-
-.media-icon-list {
-  width: 30%;
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  color: green;
+  width: 100%;
+  background-color: rgb(5, 5, 5);
+  margin-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .phone-number {
+  font-size: 5rem;
+  color: var(--text-color);
+}
+
+.media-icon-list {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  list-style: none;
+  margin-top: 1rem;
   font-size: 2rem;
-  color: green;
+  color: var(--text-color);
+}
+
+.footer-logo {
+  width: 7%;
+  border-radius: 100%;
 }
