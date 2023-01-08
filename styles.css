@@ -1,7 +1,7 @@
 :root {
   --nav-bar-background-color: black;
   --text-color: rgba(255, 255, 255, 0.763);
-  --font-family: sans-serif;
+  --font-family: times-new-roman;
   --font-weight: 650;
   --background-color: black;
 }
@@ -123,7 +123,7 @@ html {
 
 .wedding-party-pic {
   width: 30%;
-  height: 80%;
+  height: 65%;
   margin: 2rem;
   border: 5px solid grey;
 }
@@ -148,7 +148,7 @@ html {
   width: 30%;
   border: 5px solid grey;
   margin: 2rem;
-  height: 80%;
+  height: 65%;
 }
 /* SECTION 2 END  */
 
@@ -169,10 +169,34 @@ html {
 .slider {
   display: flex;
   margin-bottom: 5rem;
+  border: 5px solid rgb(128, 122, 122);
+  width: 40vw;
+  height: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* -------------------------- */
+  overflow: hidden;
+}
+
+.slider-left-btn {
+  position: absolute;
+  left: 35.5rem;
+  top: 162rem;
+  color: rgb(194, 189, 189);
+  font-size: 3rem;
+}
+
+.slider-right-btn {
+  position: absolute;
+  right: 35.5rem;
+  top: 162rem;
+  color: rgb(194, 189, 189);
+  font-size: 3rem;
 }
 
 .slider-pic {
-  width: 60rem;
+  min-width: 100%;
 }
 
 .footer {
