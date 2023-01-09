@@ -4,22 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <link href="/home/styles.css" type="text/css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/5d743bbd3f.js"
       crossorigin="anonymous"
     ></script>
     <title>GSW Events</title>
-    <script src="script.js" defer></script>
+    <script src="/home/script.js" defer></script>
   </head>
   <body>
     <!-- NAV BAR SECTION START -->
     <div class="nav-bar">
       <!-- NAV LINK LIST START  -->
       <ul class="nav-link-list">
-        <li id="home-nav-link">HOME</li>
-        <li id="services-nav-link">SERVICES</li>
-        <li id="reviews-nav-link">REVIEWS</li>
+        <li id="home-nav-link" class="nav-bar-link">
+          <a href="/home">HOME</a>
+        </li>
+        <li id="services-nav-link" class="nav-bar-link">
+          <a href="/services">SERVICES</a>
+        </li>
+        <li id="reviews-nav-link" class="nav-bar-link">
+          <a href="/reviews">REVIEWS</a>
+        </li>
         <li id="contact-nav-link">CONTACT</li>
       </ul>
       <!-- NAV LINK LIST END  -->
@@ -30,19 +36,29 @@
     </div>
     <!-- NAV BAR SECTION END -->
 
+    <div class="contact-drop-down hidden">
+      <h2 class="phone-number-dropdown">PHONE NUMBER</h2>
+      <h2 class="email-address-dropdown">EMAIL ADDRESS</h2>
+    </div>
+
     <!-- SECTION 1 START -->
     <section class="section-1">
       <div class="section-1-content">
         <!-- PROFILE PICTURE START  -->
         <img
-          src="photos/background-pic-section-1.jpg"
+          src="/photos/background-pic-section-1.jpg"
           class="profile-pic"
           alt="Profile Picture"
         />
         <!-- PROFILE PICTURE END  -->
 
         <!-- SLOGAN START  -->
-        <div class="slogan">GSW EVENTS</div>
+        <div class="slogan">
+          <div class="slogan-gsw">GSW</div>
+          <img src="/photos/gsw logo.png" class="slogan-logo" />
+          <div class="slogan-events">EVENTS</div>
+        </div>
+
         <!-- SLOGAN END  -->
       </div>
     </section>
@@ -70,7 +86,7 @@
 
         <!-- WEDDING PHOTO START  -->
         <img
-          src="photos/wedding party pic.avif"
+          src="/photos/wedding party pic.avif"
           class="wedding-party-pic"
           alt="Wedding Party Photo"
         />
@@ -97,7 +113,7 @@
         <!-- BIRTHDAY WRITING END  -->
         <!-- BIRTHDAY PHOTO START  -->
         <img
-          src="photos/birthday party pic.avif"
+          src="/photos/birthday party pic.avif"
           class="birthday-party-pic"
           alt="Birthday Party Photo"
         />
@@ -119,15 +135,15 @@
         </div>
         <img
           class="slider-pic slider-pic-1"
-          src="photos/party pic for slider +1.avif"
+          src="/photos/party pic for slider +1.avif"
         />
         <img
           class="slider-pic slider-pic-2"
-          src="photos/party pic for slider + 2.avif"
+          src="/photos/party pic for slider + 2.avif"
         />
         <img
           class="slider-pic slider-pic-3"
-          src="photos/party pic for slider +3.avif"
+          src="/photos/party pic for slider +3.avif"
         />
       </div>
     </section>
@@ -136,7 +152,7 @@
   <!-- FOOTER SECTION START  -->
   <footer class="footer">
     <!-- FOOTER LOGO START  -->
-    <img class="footer-logo" src="photos/gsw logo.png" alt="Logo" />
+    <img class="footer-logo" src="/photos/gsw logo.png" alt="Logo" />
     <!-- FOOTER LOGO END -->
     <!-- PHONE NUMBER START  -->
     <div class="phone-number">07879350100</div>
@@ -144,13 +160,17 @@
     <!-- MEDIA ICONS START  -->
     <ul class="media-icon-list">
       <li class="media-icon instagram-icon">
-        <i class="fa-brands fa-instagram"></i>
+        <a
+          class="insta-link"
+          href="https://www.instagram.com/gswevents_/"
+          target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
       </li>
       <li class="media-icon email-icon">
         <i class="fa-solid fa-envelope"></i>
       </li>
     </ul>
-
     <!-- MEDIA ICONS END -->
   </footer>
   <!-- FOOTER SECTION END  -->
