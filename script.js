@@ -1,27 +1,95 @@
-const slider = document.querySelector(".slider");
-const leftBtn = document.querySelector(".slider-left-btn");
-const rightBtn = document.querySelector(".slider-right-btn");
-const slides = document.querySelectorAll(".slider-pic");
-const slideOne = document.querySelector(".slider-pic-1");
-const slideTwo = document.querySelector(".slider-pic-2");
-const slideThree = document.querySelector(".slider-pic-3");
+// SLIDER
+theSlider = function () {
+  const slider = document.querySelector(".slider");
+  const leftBtn = document.querySelector(".slider-left-btn");
+  const rightBtn = document.querySelector(".slider-right-btn");
+  const slides = document.querySelectorAll(".slider-pic");
 
-// const goToSlide = function (slide) {
-//   slides.forEach(
-//     (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
-//   );
-// };
+  let curSlide = 1;
+  const maxSlide = slides.length;
 
-// const nextSlide = function () {
-//   if (curSlide === maxSlide - 1) {
-//     curSlide = 0;
-//   } else {
-//     curSlide++;
-//   }
+  nextSlide = function () {
+    if (curSlide === maxSlide) {
+      slides.forEach(
+        (s) =>
+          (s.style.transform = `translateX(${
+            +String(s.style.transform).slice(11, 14) + 80
+          }vw)`)
+      );
+      curSlide -= 2;
+    } else if (curSlide === 1) {
+      slides.forEach(
+        (s) =>
+          (s.style.transform = `translateX(${
+            +String(s.style.transform).slice(11, 12) - 40
+          }vw)`)
+      );
+      curSlide++;
+    } else {
+      slides.forEach(
+        (s) =>
+          (s.style.transform = `translateX(${
+            +String(s.style.transform).slice(11, 14) - 40
+          }vw)`)
+      );
+      curSlide++;
+    }
+    console.log(curSlide);
+  };
 
-//   goToSlide(curSlide);
-// };
+  previousSlide = function () {
+    if (curSlide === 1) {
+      slides.forEach(
+        (s) =>
+          (s.style.transform = `translateX(${
+            +String(s.style.transform).slice(11, 12) - 80
+          }vw)`)
+      );
+      curSlide += 2;
+    } else if (curSlide === 1) {
+      slides.forEach(
+        (s) =>
+          (s.style.transform = `translateX(${
+            +String(s.style.transform).slice(11, 12) + 40
+          }vw)`)
+      );
+      curSlide--;
+    } else {
+      slides.forEach(
+        (s) =>
+          (s.style.transform = `translateX(${
+            +String(s.style.transform).slice(11, 14) + 40
+          }vw)`)
+      );
+      curSlide--;
+    }
+    console.log(curSlide);
+  };
 
-leftBtn.addEventListener("click", function () {
-  slides.forEach((x) => (x.style.transform = "translateX(-100%)"));
+  rightBtn.addEventListener("click", nextSlide);
+  leftBtn.addEventListener("click", previousSlide);
+};
+
+theSlider();
+
+// NAV BAR
+
+const navBar = document.querySelector(".nav-bar");
+let scrolling = [];
+window.addEventListener("scroll", function () {
+  scrolling.push(window.pageYOffset);
+  if (scrolling.length > 2) {
+    scrolling = scrolling.slice(scrolling.length - 2);
+  }
+  removeNavBar();
 });
+
+removeNavBar = function () {
+  if (scrolling.at(-1) > scrolling.at(-2)) {
+    navBar.classList.remove("unhidden");
+    navBar.classList.add("hidden");
+  } else if (scrolling.at(-1) < scrolling.at(-2)) {
+    navBar.classList.remove("hidden");
+    navBar.classList.add("unhidden");
+  }
+};

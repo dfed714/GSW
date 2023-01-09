@@ -15,10 +15,6 @@ html {
   background-color: var(--background-color);
 }
 
-.hidden {
-  display: none;
-}
-
 /* NAV BAR  */
 
 .nav-bar {
@@ -185,6 +181,7 @@ html {
   top: 162rem;
   color: rgb(194, 189, 189);
   font-size: 3rem;
+  z-index: 1;
 }
 
 .slider-right-btn {
@@ -192,11 +189,13 @@ html {
   right: 35.5rem;
   top: 162rem;
   color: rgb(194, 189, 189);
+  z-index: 1;
   font-size: 3rem;
 }
 
 .slider-pic {
   min-width: 100%;
+  transition: 1s;
 }
 
 .footer {
@@ -227,4 +226,14 @@ html {
 .footer-logo {
   width: 7%;
   border-radius: 100%;
+}
+
+.hidden {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.unhidden {
+  opacity: 0.7;
+  transition: 0.5s;
 }
