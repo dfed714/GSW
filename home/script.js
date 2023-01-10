@@ -49,6 +49,10 @@ theSlider = function () {
 
   rightBtn.addEventListener("click", nextSlide);
   leftBtn.addEventListener("click", previousSlide);
+
+  // AUTOMATIC SLIDING
+
+  setInterval(nextSlide, 4000);
 };
 
 theSlider();
@@ -98,29 +102,3 @@ navBarHover = function () {
 };
 
 navBarHover();
-
-// CONTACT DROP DOWN MENU
-contactFunc = function () {
-  let mouseover = false;
-
-  contactTab.addEventListener("mouseover", function () {
-    contactMenu.classList.remove("hidden");
-    mouseover = true;
-  });
-  contactTab.addEventListener("mouseleave", function () {
-    contactMenu.classList.add("hidden");
-  });
-
-  contactMenu.addEventListener("mouseover", function () {
-    if (mouseover === true) {
-      contactMenu.classList.remove("hidden");
-    }
-  });
-
-  backgroundPic.addEventListener("mouseover", function () {
-    contactMenu.classList.add("hidden");
-    mouseover = false;
-  });
-};
-
-contactFunc();
