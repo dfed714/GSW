@@ -9,41 +9,33 @@ const backgroundPic = document.querySelector(".profile-pic");
 const navBar = document.querySelector(".nav-bar");
 
 theSlider = function () {
-  let curSlide = 1;
   const maxSlide = slides.length;
+  let curSlide = 0;
 
-  changeSlide = function (start, end, value) {
-    slides.forEach(
-      (s) =>
-        (s.style.transform = `translateX(${
-          +String(s.style.transform).slice(start, end) + value
-        }vw)`)
-    );
-  };
-
-  nextSlide = function () {
-    if (curSlide === maxSlide) {
-      changeSlide(11, 14, 80);
-      curSlide -= 2;
-    } else if (curSlide === 1) {
-      changeSlide(11, 12, -40);
-      curSlide++;
+  const nextSlide = function () {
+    if (curSlide < maxSlide - 1) {
+      curSlide += 1;
+      slides.forEach(
+        (s, i) => (s.style.transform = `translate(-${100 * curSlide}%)`)
+      );
     } else {
-      changeSlide(11, 14, -40);
-      curSlide++;
+      slides.forEach((s, i) => (s.style.transform = `translate(0%)`));
+      curSlide = 0;
     }
   };
 
-  previousSlide = function () {
-    if (curSlide === 1) {
-      changeSlide(11, 12, -80);
-      curSlide += 2;
-    } else if (curSlide === 1) {
-      changeSlide(11, 12, 40);
-      curSlide--;
+  const previousSlide = function () {
+    if (curSlide === 0) {
+      slides.forEach((s, i) => (s.style.transform = `translate(-200%)`));
+      curSlide = 2;
+    } else if (curSlide === 2) {
+      curSlide -= 1;
+      slides.forEach((s, i) => (s.style.transform = `translate(-100%)`));
     } else {
-      changeSlide(11, 14, 40);
-      curSlide--;
+      curSlide -= 1;
+      slides.forEach(
+        (s, i) => (s.style.transform = `translate(${100 * curSlide}%)`)
+      );
     }
   };
 
@@ -52,7 +44,7 @@ theSlider = function () {
 
   // AUTOMATIC SLIDING
 
-  setInterval(nextSlide, 4000);
+  // setInterval(nextSlide, 7000);
 };
 
 theSlider();
@@ -102,3 +94,11 @@ navBarHover = function () {
 };
 
 navBarHover();
+
+// HAMBURGER HIDE FUNC
+
+// const hamburgerIcon = document.querySelector(".hamburger-icon");
+
+// const removeHamburger = function () {
+//   console.log("click");
+// };
