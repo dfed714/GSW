@@ -36,7 +36,7 @@ html {
   width: 75%;
   height: 100%;
   align-items: center;
-  font-size: 1.75rem;
+  font-size: clamp(0.5rem, 1.75rem, 2rem);
   font-family: var(--font-family);
   font-weight: var(--font-weight);
   color: var(--text-color);
@@ -47,31 +47,6 @@ html {
   object-fit: cover;
   height: 80%;
   opacity: 0.7;
-}
-
-@media screen and (max-width: 1200px) {
-  .nav-bar {
-    height: 100vh;
-    width: 20%;
-    position: fixed;
-    right: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .nav-bar-logo {
-    width: 50%;
-    height: 12%;
-    margin-top: -20vh;
-    margin-bottom: -40vh;
-  }
-
-  .nav-link-list {
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 a {
@@ -308,4 +283,29 @@ a {
 .unhidden {
   opacity: 0.7;
   transition: 0.5s;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-bar {
+    height: 100vh;
+    width: 20%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .nav-bar-logo {
+    width: max(50%, 2rem);
+    height: 12%;
+    margin-top: -20vh;
+    margin-bottom: -40vh;
+  }
+
+  .nav-link-list {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+  }
 }
