@@ -64,7 +64,7 @@ a {
 /* SECTION 1 START  */
 
 .section-1-content {
-  height: 100vh;
+  height: 105vh;
   width: 100%;
   margin-top: -5.5vh;
 }
@@ -271,6 +271,7 @@ a {
 }
 
 .footer-logo {
+  margin-top: 2rem;
   width: 7%;
   border-radius: 100%;
 }
@@ -287,7 +288,7 @@ a {
 
 /* IPAD 1200PX */
 
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
   html {
     overflow-x: clip;
   }
@@ -300,7 +301,7 @@ a {
     display: flex;
     flex-direction: column-reverse;
 
-    /* TO BE REMOVED AFTER HAMBURGER IS DONE  */
+    TO BE REMOVED AFTER HAMBURGER IS DONE 
     display: none;
   }
 
@@ -402,5 +403,5 @@ a {
     right: 10px;
     top: 5px;
   }
-  
+
 /* IPHONE  */ ;
