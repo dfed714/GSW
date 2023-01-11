@@ -12,8 +12,7 @@
 }
 
 .display-none {
-  opacity: 0;
-  transition: 1s;
+  display: none;
 }
 
 .nav-bar {
@@ -51,10 +50,10 @@
 
 .hamburger-icon {
   font-size: 2em;
-}
-
-.hamburger-icon:hover {
-  cursor: pointer;
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  color: var(--text-color);
 }
 
 .menu-tab {
@@ -96,4 +95,5 @@
   top: 2%;
   font-size: 2.25rem;
   color: var(--menu-text-color);
+  z-index: 1;
 }

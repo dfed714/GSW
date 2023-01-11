@@ -97,8 +97,8 @@ navBarHover();
 
 // HAMBURGER HIDE FUNC
 
-// const hamburgerIcon = document.querySelector(".hamburger-icon");
+const hamburgerIcon = document.querySelector(".hamburger-icon");
 
-// const removeHamburger = function () {
-//   console.log("click");
-// };
+hamburgerIcon.addEventListener("click", function () {
+  console.log("click");
+});

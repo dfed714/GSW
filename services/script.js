@@ -1,10 +1,15 @@
+const menuTab = document.querySelector(".menu-tab");
 const hamburgerIcon = document.querySelector(".hamburger-icon");
 const xBtn = document.querySelector(".x-out-btn");
 
-xBtn.addEventListener("click", function () {
-  console.log("click");
+hamburgerIcon.addEventListener("click", function () {
+  console.log("bars clicked");
+  menuTab.classList.remove("display-none");
+  xBtn.classList.remove("display-none");
 });
 
-hamburgerIcon.addEventListener("click", function () {
-  console.log("click");
+xBtn.addEventListener("click", function () {
+  console.log("x clicked");
+  menuTab.classList.add("display-none");
+  xBtn.classList.add("display-none");
 });
