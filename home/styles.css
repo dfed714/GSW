@@ -98,6 +98,10 @@ a {
   opacity: 0.8;
 }
 
+.display-none {
+  display: none;
+}
+
 /* SECTION 1 START  */
 /* section-1 -> section-1-content -> profile-pic and slogan  */
 
@@ -231,7 +235,7 @@ a {
 .birthday-part-writing {
   font-size: 1.5rem;
   margin-top: 2rem;
-  width: 30%;
+  width: 30%; 
   font-family: var(--font-family);
   color: var(--text-color);
   font-weight: var(--font-weight);

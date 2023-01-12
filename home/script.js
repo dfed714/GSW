@@ -39,8 +39,8 @@ theSlider = function () {
     }
   };
 
-  rightBtn.addEventListener("click", nextSlide);
-  leftBtn.addEventListener("click", previousSlide);
+  // rightBtn.addEventListener("click", nextSlide);
+  // leftBtn.addEventListener("click", previousSlide);
 
   // AUTOMATIC SLIDING
 
@@ -97,8 +97,4 @@ navBarHover();
 
 // HAMBURGER HIDE FUNC
 
-const hamburgerIcon = document.querySelector(".hamburger-icon");
-
-hamburgerIcon.addEventListener("click", function () {
-  console.log("click");
-});
+// MENU TAB
