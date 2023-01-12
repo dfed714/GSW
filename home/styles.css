@@ -84,6 +84,7 @@ html {
   color: var(--text-color);
 }
 }
+
 /* NAV BAR END  */
 
 /* UTILITY CLASSES  */
@@ -118,16 +119,34 @@ a {
   color: rgba(255, 255, 255, 0.853);
   width: 100%;
   position: absolute;
-  top: 35%;
+  top: min(275px, 2.1em);
   text-shadow: 4px 4px 0 black;
+}
+
+.slogan-msg {
+  font-size: clamp(10%, 4vw, 4rem);
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  position: absolute;
+  top: min(425px, 7.6em);
+  text-shadow: 2px 1px 0 rgb(255, 255, 255);
 }
 
 .slogan-logo {
   border-radius: 100%;
   max-width: 12%;
+  height: 1em;
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 1100px) {
+:root {
+  --profile-pic-height: 20vw;
+}
+
 .slogan {
   position: fixed;
   top: 0;
@@ -137,6 +156,11 @@ a {
   width: max(9%, 20px);
   height: 10%;
 }
+.slogan-msg {
+  top: min(110px, 1.5em);
+  font-size: clamp(10%, 7vw, 10rem);
+}
+
 }
 
 /* SECTION 1 END  */
