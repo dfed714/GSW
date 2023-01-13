@@ -40,9 +40,10 @@ html {
   height: var(--nav-bar-height);
   width: 100%;
   background-color: var(--nav-bar-background-color);
-  opacity: 0.7;
+  opacity: 0.8;
   position: fixed;
   top: 0;
+  z-index: 4;
 }
 
 .nav-link-list {
@@ -73,21 +74,25 @@ html {
   :root {
     --nav-bar-height: 9.5vw;
   }
-.nav-link-list {
-  display: none;
-}
-.nav-bar-logo {
-  display: none;
-}
-.hamburger-icon {
-  display: block;
-  font-size: clamp(20%, 8vw, 6rem);
-  position: fixed;
-  top: clamp(0.1vw, 2rem, 3px);
-  right: max(5px, 2%);
-  color: var(--text-color);
-  z-index: 3;
-}
+
+  .nav-bar {
+    z-index: 2;
+  }
+  .nav-link-list {
+    display: none;
+  }
+  .nav-bar-logo {
+    display: none;
+  }
+  .hamburger-icon {
+    display: block;
+    font-size: clamp(20%, 8vw, 6rem);
+    position: fixed;
+    top: clamp(0.1vw, 2rem, 3px);
+    right: max(5px, 2%);
+    color: var(--text-color);
+    z-index: 3;
+  }
 }
 
 /* NAV BAR END  */
@@ -161,7 +166,6 @@ a {
 
 .profile-pic {
   object-fit: none;
-  z-index: -1;
   height: var(--profile-pic-height);
   width: inherit;
 }
@@ -175,6 +179,7 @@ a {
   position: absolute;
   top: min(275px, 2.1em);
   text-shadow: 4px 4px 0 black;
+  z-index: 2;
 }
 
 .slogan-msg {
@@ -197,24 +202,23 @@ a {
 }
 
 @media screen and (max-width: 1100px) {
-:root {
-  --profile-pic-height: 20vw;
-}
+  :root {
+    --profile-pic-height: 20vw;
+  }
 
-.slogan {
-  position: fixed;
-  top: 0;
-  font-size: clamp(40%, 8vw, 10rem);
-}
-.slogan-logo {
-  width: max(9%, 20px);
-  height: 10%;
-}
-.slogan-msg {
-  top: min(110px, 1.5em);
-  font-size: clamp(10%, 7vw, 10rem);
-}
-
+  .slogan {
+    position: fixed;
+    top: 0;
+    font-size: clamp(40%, 8vw, 10rem);
+  }
+  .slogan-logo {
+    width: max(9%, 20px);
+    height: 10%;
+  }
+  .slogan-msg {
+    top: min(110px, 1.5em);
+    font-size: clamp(10%, 7vw, 10rem);
+  }
 }
 
 /* SECTION 1 END  */
@@ -223,7 +227,7 @@ a {
 /* section-2 -> weddings-part -> wedding-party-pic and wedding-part-writing -> section-2-heading, section-2-paragraph, section-2-btn  */
 /* section-2 -> birthdays-part -> birthday-party-pic and birthday-part-writing -> sectoin-2-heading, section-2-paragraph, section-2-btn  */
 
-/* .section-2 {
+.section-2 {
   height: 130vh;
   gap: 5%;
   background-color: rgba(40, 39, 39, 0.322);
@@ -285,7 +289,7 @@ a {
 .birthday-part-writing {
   font-size: 1.5rem;
   margin-top: 2rem;
-  width: 30%; 
+  width: 30%;
   font-family: var(--font-family);
   color: var(--text-color);
   font-weight: var(--font-weight);
@@ -416,6 +420,18 @@ a {
 }
 
 .unhidden {
-  opacity: 0.7;
+  opacity: 0.8;
   transition: 0.5s;
-} */
+}
+
+@media screen and (max-width: 1100px) {
+  .hidden {
+    opacity: 1;
+    transition: 0;
+  }
+
+  .unhidden {
+    opacity: 1;
+    transition: 0;
+  }
+}
