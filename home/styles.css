@@ -10,6 +10,10 @@
   --nav-bar-height: 5rem;
   --nav-bar-width: 125rem;
 
+  /* MENU TAB  */
+  --menu-tab-background-color: rgb(255, 255, 255);
+  --menu-text-color: rgb(0, 0, 0);
+
   /* Section 1 */
   --profile-pic-height: 100vh;
   --profile-pic-width: max(100px, 100%);
@@ -82,10 +86,56 @@ html {
   top: clamp(0.1vw, 2rem, 3px);
   right: max(5px, 2%);
   color: var(--text-color);
+  z-index: 3;
 }
 }
 
 /* NAV BAR END  */
+
+/* MENU TAB  */
+.menu-tab {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  background-color: var(--menu-tab-background-color);
+  z-index: 3;
+}
+
+.menu-tab-contents {
+  margin: 0 -2.5% 0 0;
+  border: 0;
+  padding-top: min(20%, 100px);
+  width: 25%;
+  height: 50%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: clamp(0.5rem, 1vw + 0.75rem, 10rem);
+  text-align: left;
+  font-weight: 600;
+  color: var(--menu-text-color);
+  z-index: 3;
+}
+
+.menu-tab-contents > li {
+  padding-bottom: 5%;
+  border-bottom: 2px solid black;
+}
+
+.x-out-btn {
+  position: fixed;
+  top: clamp(1vw, 2rem, 3px);
+  right: max(5px, 2%);
+  font-size: clamp(2rem, 5vw, 10rem);
+  color: var(--menu-text-color);
+  z-index: 4;
+}
 
 /* UTILITY CLASSES  */
 a {

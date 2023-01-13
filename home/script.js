@@ -98,3 +98,17 @@ navBarHover();
 // HAMBURGER HIDE FUNC
 
 // MENU TAB
+
+const menuTab = document.querySelector(".menu-tab");
+const xBtn = document.querySelector(".x-out-btn");
+const hamburgerIcon = document.querySelector(".hamburger-icon");
+
+xBtn.addEventListener("click", function () {
+  xBtn.classList.add("display-none");
+  menuTab.classList.add("display-none");
+});
+
+hamburgerIcon.addEventListener("click", function () {
+  xBtn.classList.remove("display-none");
+  menuTab.classList.remove("display-none");
+});

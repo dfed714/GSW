@@ -1,5 +1,5 @@
-const menuTab = document.querySelector(".menu-tab");
 const hamburgerIcon = document.querySelector(".hamburger-icon");
+const menuTab = document.querySelector(".menu-tab");
 const xBtn = document.querySelector(".x-out-btn");
 
 hamburgerIcon.addEventListener("click", function () {
