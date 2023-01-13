@@ -1,17 +1,18 @@
 /* COLOR AND FONT ROOT  */
 :root {
   --background-color: black;
-  --nav-bar-background-color: black;
-  --text-color: rgba(255, 255, 255, 0.763);
-  --font-family: "Fiendstar--Cameo--Regular";
+  --nav-bar-background-color: rgb(0, 0, 0);
+  --text-color: rgba(190, 189, 189, 0.763);
+  --font-family: sans-serif;
   --font-weight: 650;
+  --section-text-color: rgb(71, 71, 71);
 
   /* NAV-BAR */
   --nav-bar-height: 5rem;
   --nav-bar-width: 125rem;
 
   /* MENU TAB  */
-  --menu-tab-background-color: rgb(255, 255, 255);
+  --menu-tab-background-color: rgb(143, 139, 139);
   --menu-text-color: rgb(0, 0, 0);
 
   /* Section 1 */
@@ -52,7 +53,6 @@ html {
   align-items: center;
   list-style: none;
   width: 70%;
-  /* font-size: clamp(0.5rem, 1.75rem, 2rem); */
   font-size: clamp(20%, 1.7vw, 5rem);
   font-family: var(--font-family);
   font-weight: var(--font-weight);
@@ -102,7 +102,7 @@ html {
   position: fixed;
   top: 0;
   right: 0;
-  width: 25%;
+  width: 35%;
   height: 100%;
   background-color: var(--menu-tab-background-color);
   z-index: 3;
@@ -112,7 +112,7 @@ html {
   margin: 0 -2.5% 0 0;
   border: 0;
   padding-top: min(20%, 100px);
-  width: 25%;
+  width: 35%;
   height: 50%;
   list-style: none;
   display: flex;
@@ -123,8 +123,9 @@ html {
   right: 0;
   font-size: clamp(0.5rem, 1vw + 0.75rem, 10rem);
   text-align: left;
-  font-weight: 600;
   color: var(--menu-text-color);
+  font-family: var(--font-family);
+  font-weight: 700;
   z-index: 3;
 }
 
@@ -171,6 +172,7 @@ a {
 }
 
 .slogan {
+  font-family: var(--font-family);
   font-size: clamp(30%, 10vw, 10rem);
   display: flex;
   justify-content: center;
@@ -184,6 +186,7 @@ a {
 
 .slogan-msg {
   font-size: clamp(10%, 4vw, 4rem);
+  font-family: var(--font-family);
   font-weight: 900;
   display: flex;
   justify-content: center;
@@ -216,8 +219,8 @@ a {
     height: 10%;
   }
   .slogan-msg {
-    top: min(110px, 1.5em);
-    font-size: clamp(10%, 7vw, 10rem);
+    top: min(110px, 1.7em);
+    font-size: clamp(10%, 6vw, 10rem);
   }
 }
 
@@ -228,10 +231,80 @@ a {
 /* section-2 -> birthdays-part -> birthday-party-pic and birthday-part-writing -> sectoin-2-heading, section-2-paragraph, section-2-btn  */
 
 .section-2 {
-  height: 130vh;
-  gap: 5%;
+  background: linear-gradient(
+    1200deg,
+    rgb(195, 193, 193) 10%,
+    rgb(105, 103, 103) 70%,
+    rgb(33, 32, 32)
+  );
+  padding-top: min(1.2rem, 4vw);
+  padding-bottom: min(1.2rem, 4vw);
+}
+
+.section-2-heading {
+  font-size: clamp(30%, 5vw, 10rem);
+  text-align: center;
+  margin-bottom: max(0.5em, 3vw);
+  color: var(--text-color);
+  font-weight: var(--font-weight);
+  font-family: var(--font-family);
+}
+
+.birthday-heading {
+  border-top: 1px solid grey;
+  padding-top: 2.5vw;
+}
+
+.weddings-part,
+.birthdays-part {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1em;
+  padding: 0 5vw 0 5vw;
+}
+
+.weddings-part > *,
+.birthdays-part > * {
+  max-width: min(50%, 40em);
+}
+
+.wedding-party-pic,
+.birthday-party-pic {
+  object-fit: cover;
+  border: 1vw solid rgba(182, 179, 179, 0.713);
+}
+
+.wedding-part-writing,
+.birthday-part-writing {
+  font-size: clamp(20px, 3vw, 2.5rem);
+  font-family: var(--font-family);
+  color: var(--section-text-color);
+}
+
+.section-2-btn {
+  width: max(15vw, 12em);
+  height: max(3vw, 3em);
+  font-size: clamp(10px, 1.5vw, 1.3rem);
+  font-weight: var(--font-weight);
+  color: var(--section-text-color);
+  background-color: rgba(84, 84, 84, 0.802);
+  border-radius: 2rem;
+  border-color: transparent;
+}
+
+.btn-container {
+  margin-block: max(1.5em, 3vw);
+  display: flex;
+  justify-content: center;
+}
+
+/* .section-2 {
+  width: 100%;
+  height: 100em;
+  gap: 2em;
   background-color: rgba(40, 39, 39, 0.322);
-  padding-top: 2rem;
+  padding-top: 2em;
 }
 
 .section-2-heading {
@@ -300,7 +373,8 @@ a {
   border: 5px solid grey;
   margin: 4.5rem 2rem 2rem 2rem;
   height: 65%;
-}
+} */
+
 /* SECTION 2 END  */
 
 /* SECTION 3  */
