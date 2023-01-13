@@ -5,14 +5,14 @@
   --text-color: rgba(190, 189, 189, 0.763);
   --font-family: sans-serif;
   --font-weight: 650;
-  --section-text-color: rgb(71, 71, 71);
+  --section-text-color: rgba(190, 189, 189, 0.763);
 
   /* NAV-BAR */
   --nav-bar-height: 5rem;
   --nav-bar-width: 125rem;
 
   /* MENU TAB  */
-  --menu-tab-background-color: rgb(143, 139, 139);
+  --menu-tab-background-color: rgb(183, 183, 183);
   --menu-text-color: rgb(0, 0, 0);
 
   /* Section 1 */
@@ -231,12 +231,7 @@ a {
 /* section-2 -> birthdays-part -> birthday-party-pic and birthday-part-writing -> sectoin-2-heading, section-2-paragraph, section-2-btn  */
 
 .section-2 {
-  background: linear-gradient(
-    1200deg,
-    rgb(195, 193, 193) 10%,
-    rgb(105, 103, 103) 70%,
-    rgb(33, 32, 32)
-  );
+  background: rgba(24, 24, 24, 0.998);
   padding-top: min(1.2rem, 4vw);
   padding-bottom: min(1.2rem, 4vw);
 }
