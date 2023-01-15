@@ -16,35 +16,17 @@ theSlider = function () {
     if (curSlide < maxSlide - 1) {
       curSlide += 1;
       slides.forEach(
-        (s, i) => (s.style.transform = `translate(-${100 * curSlide}%)`)
+        (s) => (s.style.transform = `translateX(${-100 * curSlide}%)`)
       );
     } else {
-      slides.forEach((s, i) => (s.style.transform = `translate(0%)`));
       curSlide = 0;
+      slides.forEach((s) => (s.style.transform = `translateX(0%)`));
     }
   };
-
-  const previousSlide = function () {
-    if (curSlide === 0) {
-      slides.forEach((s, i) => (s.style.transform = `translate(-200%)`));
-      curSlide = 2;
-    } else if (curSlide === 2) {
-      curSlide -= 1;
-      slides.forEach((s, i) => (s.style.transform = `translate(-100%)`));
-    } else {
-      curSlide -= 1;
-      slides.forEach(
-        (s, i) => (s.style.transform = `translate(${100 * curSlide}%)`)
-      );
-    }
-  };
-
-  // rightBtn.addEventListener("click", nextSlide);
-  // leftBtn.addEventListener("click", previousSlide);
 
   // AUTOMATIC SLIDING
 
-  // setInterval(nextSlide, 7000);
+  setInterval(nextSlide, 2000);
 };
 
 theSlider();
