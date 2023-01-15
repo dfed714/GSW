@@ -1,17 +1,21 @@
 {
-  "name": "GSW Events",
+  "name": "gsw-events",
   "version": "1.0.0",
-  "description": "DJ Website",
-  "default": "index.html",
-  "author": "Daniel Feddy",
-  "license": "ISC",
-  "devDependencies": {
-    "parcel": "^2.0.0-beta.1",
-    "sass": "^1.26.10"
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
+  "author": "Daniel",
+  "license": "ISC",
   "dependencies": {
     "core-js": "^3.6.5",
-    "fractional": "^1.0.0",
+    "leaflet": "^1.6.0",
+    "lodash-es": "^4.17.15",
     "regenerator-runtime": "^0.13.7"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4"
   }
 }
