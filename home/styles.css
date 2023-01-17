@@ -206,13 +206,14 @@ a {
 }
 
 @media screen and (max-width: 1100px) {
+  html {
+    margin-top: min(7.5vw, 5em);
+  }
+
   .profile-pic {
     display: none;
   }
 
-  html {
-    margin-top: min(7.5vw, 5em);
-  }
   .slogan {
     position: fixed;
     top: 0;
@@ -231,6 +232,8 @@ a {
 
 /* SECTION 1 END  */
 
+/* ABOUT SECTION  */
+
 .about-me-section {
   background: rgb(0, 0, 0);
   padding-top: min(1.2rem, 4vw);
@@ -244,12 +247,13 @@ a {
   color: var(--text-color);
   font-weight: var(--font-weight);
   font-family: var(--font-family);
-  padding-bottom: 1vw;
+  padding-block: 1vw;
   border-bottom: 1px solid var(--menu-tab-background-color);
 }
 
 .about-content {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   gap: 2vw;
   background: rgb(0, 0, 0);
@@ -286,6 +290,8 @@ a {
   }
 }
 
+/* END OF ABOUT SECTION  */
+
 /* SECTION 2 START  */
 /* section-2 -> weddings-part -> wedding-party-pic and wedding-part-writing -> section-2-heading, section-2-paragraph, section-2-btn  */
 /* section-2 -> birthdays-part -> birthday-party-pic and birthday-part-writing -> sectoin-2-heading, section-2-paragraph, section-2-btn  */
@@ -317,34 +323,40 @@ a {
 }
 
 .weddings-part,
-.birthdays-part {
+.birthdays-part,
+.rentals-part {
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 2vw;
 }
 
-.weddings-part {
+.weddings-part,
+.rentals-part {
   margin-bottom: 3vw;
 }
 
-.birthdays-part {
+.birthdays-part,
+.rentals-part {
   flex-direction: row-reverse;
 }
 
 .wedding-party-pic,
-.birthday-party-pic {
+.birthday-party-pic,
+.rental-pic {
   object-fit: cover;
   width: 60vw;
   height: 30vw;
 }
 
 .wedding-part-writing,
-.birthday-part-writing {
-  font-size: clamp(13px, 2vw, 2.5rem);
+.birthday-part-writing,
+.rental-part-writing {
+  font-size: clamp(14px, 2vw, 2.5rem);
   font-family: var(--font-family);
   color: var(--section-text-color);
   max-width: min(30%, 20em);
+  margin-top: -5vw;
   padding-inline: 7vw;
 }
 
@@ -367,20 +379,26 @@ a {
 
 @media screen and (max-width: 650px) {
   .weddings-part,
-  .birthdays-part {
+  .birthdays-part,
+  .rentals-part {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1em;
+    border-bottom: 1px solid grey;
+    padding-bottom: 10vw;
   }
 
   .wedding-part-writing,
-  .birthday-part-writing {
+  .birthday-part-writing,
+  .rental-part-writing {
+    margin-top: 0;
     max-width: min(80%, 50em);
   }
 
   .wedding-party-pic,
-  .birthday-party-pic {
+  .birthday-party-pic,
+  .rental-pic {
     object-fit: cover;
     width: 80vw;
     height: 40vw;
@@ -476,8 +494,9 @@ a {
   gap: 1vw;
 }
 
-.phone-number {
-  font-size: clamp(20px, 8vw, 5rem);
+.phone-number,
+.email-address {
+  font-size: clamp(1rem, 6vw, 5rem);
   color: var(--text-color);
 }
 
