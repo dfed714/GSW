@@ -4,39 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link class="css" href="/styles.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <script
       src="https://kit.fontawesome.com/5d743bbd3f.js"
       crossorigin="anonymous"
     ></script>
     <title>GSW Events</title>
-    <script class="js" src="/script.js" defer></script>
+    <script class="js" src="script.js" defer></script>
   </head>
   <body>
     <!-- NAV BAR SECTION START -->
     <div class="nav-bar unhidden">
       <!-- NAV LINK LIST START  -->
       <ul class="nav-link-list">
-        <li id="home-nav-link" class="nav-bar-link">
-          <a href="#">HOME</a>
+        <li class="book-nav-link">
+          <a href="https://gswevents2868.setmore.com/" target="_blank"
+            >BOOK NOW</a
+          >
+        </li>
+
+        <li id="about-nav-link" class="nav-bar-link">
+          <a href="#about">ABOUT</a>
         </li>
         <li id="services-nav-link" class="nav-bar-link">
-          <a href="#">SERVICES</a>
+          <a href="#section-2">SERVICES</a>
         </li>
         <li id="reviews-nav-link" class="nav-bar-link">
           <a href="#">REVIEWS</a>
         </li>
         <li id="contact-nav-link" class="nav-bar-link">
-          <a href="#">CONTACT</a>
+          <a href="#contact">CONTACT</a>
         </li>
       </ul>
       <!-- NAV LINK LIST END  -->
 
       <!-- TOP LOGO START  -->
-      <img class="nav-bar-logo" src="/photos/gsw logo.png" alt="DJ Logo" />
+      <img class="nav-bar-logo" src="photos/gsw logo.png" alt="DJ Logo" />
       <!-- TOP LOGO END  -->
     </div>
-
+    <div class="mobile-nav-book-btn">
+      <a href="https://gswevents2868.setmore.com/" target="_blank">BOOK NOW</a>
+    </div>
+    <img class="mobile-logo" src="photos/gsw logo.png" />
     <div class="hamburger-icon"><i class="fa-solid fa-bars"></i></div>
 
     <!-- NAV BAR SECTION END -->
@@ -47,17 +56,19 @@
     </div>
     <div class="menu-tab display-none">
       <ul class="menu-tab-contents">
-        <li class="about-btn">ABOUT</li>
-        <li class="menu-tab-services-btn">SERVICES</li>
-        <li class="menu-tab-reviews-btn">REVIEWS</li>
-        <li class="menu-tab-contact-btn">CONTACT</li>
+        <li class="about-btn"><a href="#about">ABOUT</a></li>
+        <li class="menu-tab-services-btn">
+          <a href="#section-2">SERVICES</a>
+        </li>
+        <li class="menu-tab-reviews-btn"><a href="#reviews">REVIEWS</a></li>
+        <li class="menu-tab-contact-btn"><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
     <!-- SECTION 1 START -->
     <div class="section-1-content">
       <!-- PROFILE PICTURE START  -->
       <img
-        src="/photos/background-pic-section-1.jpg"
+        src="photos/promo pic of party.png"
         class="profile-pic"
         alt="Profile Picture"
       />
@@ -66,7 +77,7 @@
       <!-- SLOGAN START  -->
       <div class="slogan">
         GSW
-        <img src="/photos/gsw logo.png" class="slogan-logo" />
+        <img src="photos/gsw logo.png" class="slogan-logo" />
         EVENTS
       </div>
       <div class="slogan-msg">YOUR PARTY STARTS HERE</div>
@@ -74,14 +85,34 @@
     </div>
     <!-- SECTION 1 END  -->
 
+    <section id="reviews">
+      <div class="reviews-heading">REVIEWS</div>
+      <div class="reviews-container">
+        <div class="review">DJ GAB WAS EXCELLENT! EVERYONE LOVED HIS MUSIC</div>
+        <div class="review">THANK YOU SO MUCH DJ GAB! YOU MADE OUR EVENT!</div>
+        <div class="review">
+          WE LOVED HIS MUSIC, LIGHTS, AND SMOKE MACHINE. IT WAS FANTASTIC
+        </div>
+        <div class="review">
+          WE WILL DEFINITELY CALL DJ GAB AGAIN FOR OUR NEXT EVENT.
+        </div>
+        <div class="review">
+          EVERYONE AT THE EVENT WAS ASKING WHO THE DJ WAS. HE WAS UNBELIEVABLE!
+        </div>
+        <div class="review">
+          WE COULDN'T RATE HIM HIGH ENOUGH! IT WAS TOO GOOD TO BE TRUE!
+        </div>
+      </div>
+    </section>
+
     <!-- ABOUT SECTION  -->
-    <section class="about-me-section">
+    <section id="about" class="about-me-section">
       <h1 class="about-me-heading">ABOUT ME</h1>
       <div class="about-content">
-        <img class="about-pic" src="/photos/dj on the decks.avif" />
+        <img class="about-pic" src="photos/Screenshot_20220117-000356.jpg" />
         <p class="about-writing">
-          DJ Gab is Manchester Based DJ. DJ Gab performs at a variety of events
-          as well as supplying Audio and Light rentals.
+          DJ Gab is Manchester Based DJ who performs at a variety of events as
+          well as supplying Audio and Light rentals.
         </p>
       </div>
     </section>
@@ -89,7 +120,7 @@
     <!-- END OF ABOUT SECTION  -->
 
     <!-- SECTION 2 START  -->
-    <section class="section-2">
+    <section id="section-2" class="section-2">
       <h1 class="services-heading">SERVICES</h1>
 
       <!-- RENTAL CONTENT START  -->
@@ -107,7 +138,7 @@
 
         <!-- RENTALS PHOTO START  -->
         <img
-          src="/photos/dj deck pic.avif"
+          src="photos/IMG_20220312_200823.jpg"
           class="rental-pic"
           alt="Audio and Light Rental Photo"
         />
@@ -131,7 +162,7 @@
 
         <!-- WEDDING PHOTO START  -->
         <img
-          src="/photos/wedding party pic.avif"
+          src="photos/IMG_20220828_183843.jpg"
           class="wedding-party-pic"
           alt="Wedding Party Photo"
         />
@@ -154,7 +185,7 @@
         <!-- BIRTHDAY WRITING END  -->
         <!-- BIRTHDAY PHOTO START  -->
         <img
-          src="/photos/birthday party pic.avif"
+          src="photos/IMG_20220317_185024_3.jpg"
           class="birthday-party-pic"
           alt="Birthday Party Photo"
         />
@@ -176,27 +207,28 @@
       <div class="slider">
         <img
           class="slider-pic-1 slider-pic"
-          src="/photos/party pic for slider +1.avif"
+          src="photos/Snapchat-1183752034.jpg"
         />
-        <img
-          class="slider-pic-2 slider-pic"
-          src="/photos/party pic for slider + 2.avif"
-        />
+        <img class="slider-pic-2 slider-pic" src="photos/blurry pic.png" />
         <img
           class="slider-pic-3 slider-pic"
-          src="/photos/party pic for slider +3.avif"
+          src="photos/other screenshot.png"
         />
       </div>
       <div class="btn-container">
-        <button class="book-btn">BOOK NOW</button>
+        <button class="book-btn">
+          <a href="https://gswevents2868.setmore.com/" target="_blank"
+            >BOOK NOW</a
+          >
+        </button>
       </div>
     </section>
     <!-- SLIDER SECTION END  -->
   </body>
   <!-- FOOTER SECTION START  -->
-  <footer class="footer">
+  <footer id="contact" class="footer">
     <!-- FOOTER LOGO START  -->
-    <img class="footer-logo" src="/photos/gsw logo.png" alt="Logo" />
+    <img class="footer-logo" src="photos/gsw logo.png" alt="Logo" />
     <!-- FOOTER LOGO END -->
     <!-- PHONE NUMBER START  -->
     <div class="phone-number">07879350100</div>

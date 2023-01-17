@@ -16,11 +16,11 @@ theSlider = function () {
     if (curSlide < maxSlide - 1) {
       curSlide += 1;
       slides.forEach(
-        (s) => (s.style.transform = `translateX(${-100 * curSlide}%)`)
+        (s) => (s.style.transform = `translateY(${-100 * curSlide}%)`)
       );
     } else {
       curSlide = 0;
-      slides.forEach((s) => (s.style.transform = `translateX(0%)`));
+      slides.forEach((s) => (s.style.transform = `translateY(0%)`));
     }
   };
 
