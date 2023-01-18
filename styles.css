@@ -132,14 +132,20 @@ body {
 
   @media screen and (max-width: 450px) {
     .mobile-nav-book-btn {
-      top: 0.75%;
+      top: 1%;
     }
   }
 
   @media screen and (max-width: 420px) {
     .mobile-nav-book-btn {
-      top: 0.6%;
-      padding: 0.6em;
+      top: 1%;
+      padding: 0.5em;
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    .mobile-nav-book-btn {
+      top: 0.9%;
     }
   }
 
