@@ -1,7 +1,7 @@
 // SLIDER
 const leftBtn = document.querySelector(".slider-left-btn");
 const rightBtn = document.querySelector(".slider-right-btn");
-const slides = document.querySelectorAll(".slider-pic");
+const slides = document.querySelectorAll(".slider-review");
 const navLinks = document.querySelectorAll(".nav-bar-link");
 const contactTab = document.querySelector("#contact-nav-link");
 const contactMenu = document.querySelector(".contact-drop-down");
@@ -16,17 +16,17 @@ theSlider = function () {
     if (curSlide < maxSlide - 1) {
       curSlide += 1;
       slides.forEach(
-        (s) => (s.style.transform = `translateY(${-100 * curSlide}%)`)
+        (s) => (s.style.transform = `translateX(${-100 * curSlide}%)`)
       );
     } else {
       curSlide = 0;
-      slides.forEach((s) => (s.style.transform = `translateY(0%)`));
+      slides.forEach((s) => (s.style.transform = `translateX(0%)`));
     }
   };
 
   // AUTOMATIC SLIDING
 
-  setInterval(nextSlide, 2000);
+  setInterval(nextSlide, 4000);
 };
 
 theSlider();

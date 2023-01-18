@@ -30,7 +30,7 @@
           <a href="#section-2">SERVICES</a>
         </li>
         <li id="reviews-nav-link" class="nav-bar-link">
-          <a href="#">REVIEWS</a>
+          <a href="#reviews">REVIEWS</a>
         </li>
         <li id="contact-nav-link" class="nav-bar-link">
           <a href="#contact">CONTACT</a>
@@ -85,26 +85,6 @@
     </div>
     <!-- SECTION 1 END  -->
 
-    <section id="reviews">
-      <div class="reviews-heading">REVIEWS</div>
-      <div class="reviews-container">
-        <div class="review">DJ GAB WAS EXCELLENT! EVERYONE LOVED HIS MUSIC</div>
-        <div class="review">THANK YOU SO MUCH DJ GAB! YOU MADE OUR EVENT!</div>
-        <div class="review">
-          WE LOVED HIS MUSIC, LIGHTS, AND SMOKE MACHINE. IT WAS FANTASTIC
-        </div>
-        <div class="review">
-          WE WILL DEFINITELY CALL DJ GAB AGAIN FOR OUR NEXT EVENT.
-        </div>
-        <div class="review">
-          EVERYONE AT THE EVENT WAS ASKING WHO THE DJ WAS. HE WAS UNBELIEVABLE!
-        </div>
-        <div class="review">
-          WE COULDN'T RATE HIM HIGH ENOUGH! IT WAS TOO GOOD TO BE TRUE!
-        </div>
-      </div>
-    </section>
-
     <!-- ABOUT SECTION  -->
     <section id="about" class="about-me-section">
       <h1 class="about-me-heading">ABOUT ME</h1>
@@ -141,6 +121,7 @@
           src="photos/IMG_20220312_200823.jpg"
           class="rental-pic"
           alt="Audio and Light Rental Photo"
+          loading="lazy"
         />
         <!-- RENTALS PHOTO END  -->
       </div>
@@ -165,6 +146,7 @@
           src="photos/IMG_20220828_183843.jpg"
           class="wedding-party-pic"
           alt="Wedding Party Photo"
+          loading="lazy"
         />
         <!-- WEDDING PHOTO END  -->
       </div>
@@ -188,12 +170,15 @@
           src="photos/IMG_20220317_185024_3.jpg"
           class="birthday-party-pic"
           alt="Birthday Party Photo"
+          loading="lazy"
         />
         <!-- BIRTHDAY PHOTO END  -->
       </div>
       <div class="btn-container">
         <button class="birthdays-btn section-2-btn">
-          <a href="#">FIND OUT MORE</a>
+          <a href="https://gswevents2868.setmore.com/services" target="_blank"
+            >FIND OUT MORE</a
+          >
         </button>
       </div>
 
@@ -202,18 +187,22 @@
     <!-- SECTION 2 END  -->
 
     <!-- SLIDER SECTION START  -->
-    <section class="section-3">
-      <div class="slider-writing">CHECK OUT MORE EVENT PHOTOS!</div>
+    <section class="section-3" id="reviews">
+      <div class="slider-writing">REVIEWS</div>
       <div class="slider">
-        <img
-          class="slider-pic-1 slider-pic"
-          src="photos/Snapchat-1183752034.jpg"
-        />
-        <img class="slider-pic-2 slider-pic" src="photos/blurry pic.png" />
-        <img
-          class="slider-pic-3 slider-pic"
-          src="photos/other screenshot.png"
-        />
+        <div class="slider-review">
+          "DJ GAB WAS OUTSTANDING! HE MADE OUR NIGHT!"
+        </div>
+        <div class="slider-review display-none">
+          "EVERYONE AT OUR EVENT WAS ASKING WHO OUR DJ WAS. EVERYONE WANTS TO
+          HIRE HIM NOW!"
+        </div>
+        <div class="slider-review display-none">
+          "THANK YOU SO MUCH DJ GAB! WE CAN'T THANK YOU ENOUGH!"
+        </div>
+        <div class="slider-review display-none">
+          "IF ANYONE ELSE IS HOSTING AN EVENT, JUST HIRE DJ GAB!"
+        </div>
       </div>
       <div class="btn-container">
         <button class="book-btn">
