@@ -2,18 +2,19 @@
 :root {
   --background-color: #5f7470;
   --nav-bar-background-color: rgb(0, 0, 0);
-  --text-color: #cccccc;
+  --text-color: #f5f5f5;
   --font-family: sans-serif;
   --font-weight: 650;
-  --section-text-color: #cccccc;
+  --section-text-color: #f5f5f5;
 
   /* NAV-BAR */
   --nav-bar-height: clamp(2rem, 7vw, 6rem);
   --nav-bar-width: 125rem;
 
   /* MENU TAB  */
-  --menu-tab-background-color: #5f7470;
+  --menu-tab-background-color: #9b63c3;
   --menu-text-color: rgb(0, 0, 0);
+  --btn-color: #9b63c3;
 
   /* Section 1 */
   --profile-pic-height: 100vh;
@@ -78,7 +79,7 @@ body {
 .book-nav-link {
   padding: 1vw;
   border-radius: 2em;
-  background-color: #5f7470;
+  background-color: var(--menu-tab-background-color);
 }
 
 .hamburger-icon,
@@ -110,7 +111,7 @@ body {
     position: fixed;
     top: clamp(0.1vw, 2rem, 3px);
     right: max(5px, 2%);
-    color: var(--text-color);
+    color: var(--section-text-color);
     z-index: 3;
   }
 
@@ -118,7 +119,7 @@ body {
     z-index: 3;
     padding: 0.75em;
     border-radius: 2em;
-    background-color: #5f7470;
+    background-color: var(--btn-color);
     font-size: clamp(10px, 2vw, 5rem);
     font-family: var(--font-family);
     font-weight: 800;
@@ -127,6 +128,19 @@ body {
     position: fixed;
     left: max(5px, 2%);
     top: clamp(2px, 2vw, 1em);
+  }
+
+  @media screen and (max-width: 450px) {
+    .mobile-nav-book-btn {
+      top: 0.75%;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .mobile-nav-book-btn {
+      top: 0.6%;
+      padding: 0.6em;
+    }
   }
 
   .mobile-logo {
@@ -216,6 +230,7 @@ a {
   object-fit: cover;
   height: var(--profile-pic-height);
   width: 100%;
+  margin-bottom: 2em;
 }
 
 .slogan {
@@ -266,6 +281,10 @@ a {
     top: 13.5em;
     z-index: 1;
   }
+
+  .profile-pic {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -296,18 +315,21 @@ a {
   background: rgb(0, 0, 0);
   padding-top: min(1.2rem, 4vw);
   padding-bottom: min(1.2rem, 4vw);
+  border-bottom: 1px solid var(--menu-tab-background-color);
+  margin-bottom: 3vw;
 }
 
 .about-me-heading {
   font-size: clamp(20%, 4.5vw, 10rem);
   text-align: center;
   margin-bottom: max(0.5em, 3vw);
-  color: var(--text-color);
+  color: var(--section-text-color);
   font-weight: var(--font-weight);
   font-family: var(--font-family);
   padding-block: 1vw;
-  border-bottom: 1px solid var(--menu-tab-background-color);
-  border-top: 1px solid var(--menu-tab-background-color);
+  width: 30%;
+  margin-inline: auto;
+  border: 1px solid var(--menu-tab-background-color);
 }
 
 .about-content {
@@ -365,12 +387,14 @@ a {
 .services-heading {
   font-size: clamp(20%, 4.5vw, 10rem);
   text-align: center;
-  margin-bottom: max(0.5em, 3vw);
-  color: var(--text-color);
+  color: var(--section-text-color);
   font-weight: var(--font-weight);
   font-family: var(--font-family);
-  padding-bottom: 1vw;
-  border-bottom: 1px solid var(--menu-tab-background-color);
+  padding-block: 1vw;
+  margin-bottom: max(0.5em, 3vw);
+  width: 30%;
+  margin-inline: auto;
+  border: 1px solid var(--menu-tab-background-color);
 }
 
 .section-2-heading {
@@ -378,9 +402,14 @@ a {
   text-align: left;
   margin-top: max(0.5em, 3vw);
   margin-bottom: max(0.5em, 3vw);
-  color: var(--text-color);
+  color: #f5f5f5;
   font-weight: var(--font-weight);
   font-family: var(--font-family);
+  width: 50%;
+  margin-inline: auto;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--btn-color);
+  text-align: center;
 }
 
 .weddings-part,
@@ -430,10 +459,9 @@ a {
   font-size: clamp(15px, 3vw, 1.5rem);
   font-weight: var(--font-weight);
   color: var(--section-text-color);
-  background-color: #5f7470;
+  background-color: var(--btn-color);
   border-radius: 5rem;
   border-color: transparent;
-  margin-bottom: max(-5vw, -1em);
 }
 
 .btn-container {
@@ -450,8 +478,13 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 1em;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid var(--menu-tab-background-color);
     padding-bottom: 10vw;
+  }
+
+  .birthdays-part {
+    border-bottom: none;
+    padding-bottom: 5vw;
   }
 
   .wedding-part-writing,
@@ -484,8 +517,9 @@ a {
 
 .section-3 {
   background-color: black;
+  padding-top: 2em;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid grey;
+  border-block: 1px solid var(--menu-tab-background-color);
 }
 
 .slider-writing {
@@ -493,10 +527,12 @@ a {
   font-size: clamp(3vw, 4.5vw, 2.5rem);
   font-family: var(--font-family);
   font-weight: var(--font-weight);
-  color: var(--text-color);
-  margin-bottom: 0.5em;
-  padding-top: 2vw;
-  border-top: 1px solid grey;
+  color: var(--section-text-color);
+  margin-bottom: 1em;
+  margin-inline: auto;
+  padding-block: 1vw;
+  width: 30%;
+  border: 1px solid var(--menu-tab-background-color);
 }
 
 @media screen and (max-width: 1350px) {
@@ -528,7 +564,7 @@ a {
   font-size: clamp(17px, 4.5vw, 4rem);
   font-weight: var(--font-weight);
   padding-inline: 5vw;
-  background-color: rgb(56, 55, 55);
+  background-color: var(--menu-tab-background-color);
   color: #cccccc;
   position: relative;
   height: 100%;
@@ -537,16 +573,13 @@ a {
   transition: 1s;
 }
 
-@media screen and (max-width: 1100px) {
-}
-
 .book-btn {
   width: max(16vw, 9.5em);
   height: max(4vw, 2.5em);
   font-size: clamp(17px, 4.5vw, 2.5rem);
   font-weight: var(--font-weight);
   color: var(--section-text-color);
-  background-color: #5f7470;
+  background-color: var(--btn-color);
   border-radius: 5rem;
   border-color: transparent;
   margin-block: 1em;
@@ -556,7 +589,7 @@ a {
 /* footer -> footer-logo, phone-number, media-icon-list -> insta-link  */
 
 .footer {
-  padding-top: 1vw;
+  padding-top: 2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -568,7 +601,7 @@ a {
 .phone-number,
 .email-address {
   font-size: clamp(1rem, 6vw, 5rem);
-  color: var(--text-color);
+  color: var(--section-text-color);
 }
 
 .media-icon-list {
