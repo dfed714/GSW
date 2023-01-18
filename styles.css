@@ -421,7 +421,6 @@ a {
   font-family: var(--font-family);
   color: var(--section-text-color);
   max-width: min(30%, 20em);
-  margin-top: -5vw;
   padding-inline: 7vw;
 }
 
