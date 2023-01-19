@@ -47,7 +47,7 @@
   --heading-font-size: clamp(17px, 1.5vw, 2rem);
   --heading-font-weight: 600;
   --heading-font: "Shrikhand";
-  --paragraph-font: "Shrikhand";
+  --paragraph-font: "Sofia Sans";
   --parargraph-font-size: clamp(15px, 1.5vw, 2.5rem);
   --paragraph-text-color: white;
   --paragraph-line-height: 1.5em;
