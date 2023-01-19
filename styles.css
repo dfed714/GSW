@@ -1,24 +1,80 @@
 /* COLOR AND FONT ROOT  */
 :root {
-  --background-color: #5f7470;
-  --nav-bar-background-color: rgb(0, 0, 0);
-  --text-color: #f5f5f5;
-  --font-family: sans-serif;
-  --font-weight: 650;
-  --section-text-color: #f5f5f5;
+  --background-color: black;
 
   /* NAV-BAR */
-  --nav-bar-height: clamp(2rem, 7vw, 6rem);
-  --nav-bar-width: 125rem;
+  --nav-bar-background-color: rgb(0, 0, 0);
+  --nav-bar-opacity: 0.8;
+  --nav-bar-height: clamp(2rem, 7vh, 6rem);
+  --nav-bar-width: 100%;
+  --nav-bar-font: "Shrikhand";
+  --nav-bar-font-weight: 650;
+  --nav-bar-content-font-size: clamp(20%, 1.3vw, 5rem);
+  --nav-bar-text-color: white;
+  --nav-bar-logo-height: 80%;
+  --nav-bar-book-btn-background-color: #9b63c3;
+  --nav-bar-book-btn-font-weight: 600;
 
   /* MENU TAB  */
   --menu-tab-background-color: #9b63c3;
-  --menu-text-color: rgb(0, 0, 0);
-  --btn-color: #9b63c3;
+  --menu-tab-text-color: rgb(0, 0, 0);
+  --menu-tab-width: 45%;
+  --menu-tab-height: 100%;
+  --menu-tab-font: "Shrikhand";
+  --menu-tab-font-weight: 700;
+  --menu-tab-font-size: clamp(0.5rem, 1vw + 0.75rem, 10rem);
+  --menu-tab-underline-color: black;
+  --x-out-btn-font-size: clamp(2rem, 5vw, 10rem);
 
-  /* Section 1 */
+  /* HOME PAGE */
+  --home-page-background-color: black;
   --profile-pic-height: 100vh;
+  --profile-pic-width: 80%;
+  --slogan-font: "Shrikhand";
+  --slogan-font-size: clamp(45px, 10vw, 9rem);
+  --slogan-color: white;
+  --slogan-shadow-color: black;
+  --slogan-msg-font: "Shrikhand";
+  --slogan-msg-font-size: clamp(13.5px, 8vw, 2.75rem);
+  --slogan-msg-color: white;
+  --slogan-msg-shadow-color: black;
+  --slogan-logo-max-width: 12%;
+  --slogan-logo-height: 1em;
+
+  /* MAIN CONTENT */
+  --box-color: #9b63c3;
+  --heading-text-color: white;
+  --heading-font-size: clamp(17px, 1.5vw, 2rem);
+  --heading-font-weight: 600;
+  --heading-font: "Shrikhand";
+  --paragraph-font: "Shrikhand";
+  --parargraph-font-size: clamp(15px, 1.5vw, 2.5rem);
+  --paragraph-text-color: white;
+  --paragraph-line-height: 1.5em;
+  --paragraph-font-weight: 200;
+  --about-pic-width: 30vw;
+  --about-pic-height: 30vw;
+  --sub-heading-font-size: clamp(16px, 1.75vw, 2.5rem);
+  --sub-heading-text-color: white;
+  --sub-heading-font-weight: 400;
+  --sub-heading-font: "Shrikhand";
+  --btn-background-color: #9b63c3;
+  --btn-text-color: white;
+  --btn-font-weight: 600;
+  --btn-font: "Shrikhand";
+  --review-font: "Shrikhand";
+  --review-font-size: clamp(13px, 2.5vw, 4rem);
+  --btn-font-size: clamp(15px, 3vw, 1.5rem);
+  --btn-width: max(16vw, 11em);
+  --btn-height: max(4vw, 2.5em);
+
+  /* FOOTER  */
+  --footer-background-color: black;
+  --footer-font-size: clamp(1rem, 3vw, 5rem);
+  --footer-text-color: white;
 }
+
+/* GENERAL STYLING  */
 
 * {
   padding: 0;
@@ -30,7 +86,7 @@ html {
   overflow-x: clip;
   font-size: 16px;
   scroll-behavior: smooth;
-  background-color: black;
+  background-color: var(--background-color);
 }
 
 html,
@@ -41,6 +97,32 @@ body {
   position: relative;
 }
 
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff,
+      0 0 40px rgb(239, 81, 228), 0 0 80px rgb(231, 126, 229),
+      0 0 90px rgb(188, 50, 172), 0 0 100px rgb(126, 44, 96),
+      0 0 150px rgb(219, 92, 228);
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+/* END OF GENERAL STYLING  */
+
+.display-none {
+  display: none;
+}
+
 /* NAV BAR  */
 /* nav-bar -> nav-link-list and nav-bar-logo -> nav bar contents   */
 
@@ -49,9 +131,9 @@ body {
   justify-content: space-around;
   align-items: center;
   height: var(--nav-bar-height);
-  width: 100%;
+  width: var(--nav-bar-width);
   background-color: var(--nav-bar-background-color);
-  opacity: 0.9;
+  opacity: var(--nav-bar-opacity);
   position: fixed;
   top: 0;
   z-index: 4;
@@ -62,24 +144,29 @@ body {
   justify-content: space-evenly;
   align-items: center;
   list-style: none;
-  width: 70%;
-  font-size: clamp(20%, 1.7vw, 5rem);
-  font-family: var(--font-family);
-  font-weight: var(--font-weight);
-  color: var(--text-color);
+  width: 90%;
+  font-size: var(--nav-bar-content-font-size);
+  font-family: var(--nav-bar-font);
+  font-weight: var(--nav-bar-font-weight);
+  color: var(--nav-bar-text-color);
 }
 
 .nav-bar-logo {
   border-radius: 100%;
   object-fit: cover;
-  height: 80%;
-  opacity: 0.7;
+  height: var(--nav-bar-logo-height);
 }
 
 .book-nav-link {
-  padding: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 0.25vw;
+  padding-inline: 1vw;
   border-radius: 2em;
-  background-color: var(--menu-tab-background-color);
+  background-color: var(--nav-bar-book-btn-background-color);
+  color: var(--nav-bar-text-color);
+  font-weight: var(--nav-bar-book-btn-font-weight);
 }
 
 .hamburger-icon,
@@ -111,7 +198,7 @@ body {
     position: fixed;
     top: clamp(0.1vw, 2rem, 3px);
     right: max(5px, 2%);
-    color: var(--section-text-color);
+    color: var(--nav-bar-text-color);
     z-index: 3;
   }
 
@@ -119,11 +206,11 @@ body {
     z-index: 3;
     padding: 0.75em;
     border-radius: 2em;
-    background-color: var(--btn-color);
+    background-color: var(--nav-bar-book-btn-background-color);
     font-size: clamp(10px, 2vw, 5rem);
-    font-family: var(--font-family);
+    font-family: var(--nav-bar-font);
     font-weight: 800;
-    color: var(--text-color);
+    color: var(--nav-bar-text-color);
     display: block;
     position: fixed;
     left: max(5px, 2%);
@@ -168,8 +255,8 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  width: 45%;
-  height: 100%;
+  width: var(--menu-tab-width);
+  height: var(--menu-tab-height);
   background-color: var(--menu-tab-background-color);
   z-index: 3;
 }
@@ -178,7 +265,7 @@ body {
   margin: 0 -2.5% 0 0;
   border: 0;
   padding-top: min(20%, 100px);
-  width: 45%;
+  width: var(--menu-tab-width);
   height: 50%;
   list-style: none;
   display: flex;
@@ -187,88 +274,86 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  font-size: clamp(0.5rem, 1vw + 0.75rem, 10rem);
+  font-size: var(--menu-tab-font-size);
   text-align: left;
   color: var(--menu-text-color);
-  font-family: var(--font-family);
-  font-weight: 700;
+  font-family: var(--menu-tab-font);
+  font-weight: var(--menu-tab-font-weight);
   z-index: 3;
 }
 
 .menu-tab-contents > li {
   padding-bottom: 5%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--menu-tab-underline-color);
 }
 
 .x-out-btn {
   position: fixed;
   top: clamp(1vw, 2rem, 3px);
   right: max(5px, 2%);
-  font-size: clamp(2rem, 5vw, 10rem);
-  color: var(--menu-text-color);
+  font-size: var(--x-out-btn-font-size);
+  color: var(--menu-tab-text-color);
   z-index: 4;
 }
 
-/* UTILITY CLASSES  */
-a {
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-.underline {
-  text-decoration: underline;
-  opacity: 0.8;
-}
-
-.display-none {
-  display: none;
-}
-
-/* SECTION 1 START  */
+/* HOME PAGE START  */
 /* section-1 -> section-1-content -> profile-pic and slogan  */
 
 .section-1-content {
   width: 100%;
-  background-color: black;
+  background-color: var(--home-page-background-color);
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px double var(--box-color);
+  margin-bottom: 2vw;
+  padding-bottom: 2vw;
 }
 
 .profile-pic {
   object-fit: cover;
   height: var(--profile-pic-height);
-  width: 100%;
+  width: var(--profile-pic-width);
   margin-bottom: 2em;
 }
 
-.slogan {
-  font-family: var(--font-family);
-  font-size: clamp(45px, 10vw, 9rem);
-  display: flex;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.853);
+.slogan-container {
+  height: var(--profile-pic-height);
   width: 100%;
   position: absolute;
-  top: 2em;
-  text-shadow: 4px 4px 0 black;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slogan {
+  font-family: var(--slogan-font);
+  font-size: var(--slogan-font-size);
+  display: flex;
+  justify-content: center;
+  color: var(--slogan-color);
+  width: 100%;
+  text-shadow: 4px 4px 0 var(--slogan-shadow-color);
   z-index: 2;
+  animation: flicker 1.5s infinite alternate;
 }
 
 .slogan-msg {
-  font-size: clamp(13.5px, 3vw, 2.75rem);
-  font-family: var(--font-family);
+  font-size: var(--slogan-msg-font-size);
+  font-family: var(--slogan-msg-font);
   display: flex;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.853);
+  color: var(--slogan-msg-color);
   width: 100%;
-  position: absolute;
-  top: 10em;
-  text-shadow: 2px 2px 0 black;
+  text-shadow: 2px 2px 0 var(--slogan-msg-shadow-color);
+  animation: flicker 1.5s infinite alternate;
 }
 
 .slogan-logo {
   border-radius: 100%;
-  max-width: 12%;
-  height: 1em;
-  opacity: 0.8;
+  max-width: var(--slogan-logo-width);
+  height: var(--slogan-logo-height);
 }
 
 @media screen and (max-width: 1100px) {
@@ -293,49 +378,29 @@ a {
   }
 }
 
-@media screen and (max-width: 900px) {
-  .slogan {
-    top: 4em;
-  }
-
-  .slogan-msg {
-    top: 17em;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .slogan {
-    top: 5em;
-  }
-
-  .slogan-msg {
-    top: 20em;
-  }
-}
-
 /* SECTION 1 END  */
 
 /* ABOUT SECTION  */
 
 .about-me-section {
-  background: rgb(0, 0, 0);
+  background: var(--background-color);
   padding-top: min(1.2rem, 4vw);
   padding-bottom: min(1.2rem, 4vw);
-  border-bottom: 1px solid var(--menu-tab-background-color);
+  border-bottom: 1px solid var(--box-color);
   margin-bottom: 3vw;
 }
 
 .about-me-heading {
-  font-size: clamp(20%, 4.5vw, 10rem);
+  font-size: var(--heading-font-size);
   text-align: center;
   margin-bottom: max(0.5em, 3vw);
-  color: var(--section-text-color);
-  font-weight: var(--font-weight);
-  font-family: var(--font-family);
+  color: var(--heading-text-color);
+  font-weight: var(--heading-font-weight);
+  font-family: var(--heading-font);
   padding-block: 1vw;
   width: 30%;
   margin-inline: auto;
-  border: 1px solid var(--menu-tab-background-color);
+  border: 1px solid var(--box-color);
 }
 
 .about-content {
@@ -344,22 +409,24 @@ a {
   align-items: center;
   justify-content: center;
   gap: 2vw;
-  background: rgb(0, 0, 0);
+  background: var(--background-color);
   padding-bottom: min(1.2rem, 4vw);
 }
 
 .about-pic {
   object-fit: cover;
-  width: 30vw;
-  height: 30vw;
+  width: var(--about-pic-width);
+  height: var(--about-pic-height);
+  padding: 2vw;
 }
 
 .about-writing {
-  font-size: clamp(12px, 3vw, 2.5rem);
-  font-family: var(--font-family);
-  color: var(--section-text-color);
-  max-width: min(40%, 20em);
-  padding-inline: 7vw;
+  font-size: var(--parargraph-font-size);
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-text-color);
+  line-height: var(--paragraph-line-height);
+  max-width: min(50%, 40em);
+  padding-inline: 2vw;
 }
 
 @media screen and (max-width: 650px) {
@@ -381,40 +448,40 @@ a {
 
 /* END OF ABOUT SECTION  */
 
-/* SECTION 2 START  */
+/*SERVICES SECTION START  */
 /* section-2 -> weddings-part -> wedding-party-pic and wedding-part-writing -> section-2-heading, section-2-paragraph, section-2-btn  */
 /* section-2 -> birthdays-part -> birthday-party-pic and birthday-part-writing -> sectoin-2-heading, section-2-paragraph, section-2-btn  */
 
 .section-2 {
-  background: rgb(0, 0, 0);
+  background: var(--background-color);
   padding-bottom: min(1.2rem, 4vw);
 }
 
 .services-heading {
-  font-size: clamp(20%, 4.5vw, 10rem);
+  font-size: var(--heading-font-size);
   text-align: center;
-  color: var(--section-text-color);
-  font-weight: var(--font-weight);
-  font-family: var(--font-family);
+  color: var(--heading-text-color);
+  font-weight: var(--heading-font-weight);
+  font-family: var(--heading-font);
   padding-block: 1vw;
   margin-bottom: max(0.5em, 3vw);
   width: 30%;
   margin-inline: auto;
-  border: 1px solid var(--menu-tab-background-color);
+  border: 1px solid var(--box-color);
 }
 
 .section-2-heading {
-  font-size: clamp(14px, 2vw, 2.5rem);
+  font-size: var(--sub-heading-font-size);
   text-align: left;
   margin-top: max(0.5em, 3vw);
   margin-bottom: max(0.5em, 3vw);
-  color: #f5f5f5;
-  font-weight: var(--font-weight);
-  font-family: var(--font-family);
+  color: var(--sub-heading-text-color);
+  font-weight: var(--sub-heading-font-weight);
+  font-family: var(--sub-heading-font);
   width: 50%;
   margin-inline: auto;
   padding-bottom: 1em;
-  border-bottom: 1px solid var(--btn-color);
+  border-bottom: 1px solid var(--box-color);
   text-align: center;
 }
 
@@ -425,6 +492,8 @@ a {
   align-items: center;
   justify-content: space-around;
   gap: 2vw;
+  padding-block: 4vw 8vw;
+  border-bottom: 1px solid var(--box-color);
 }
 
 .weddings-part,
@@ -441,8 +510,8 @@ a {
 .birthday-party-pic,
 .rental-pic {
   object-fit: cover;
-  width: 60vw;
-  height: 29vw;
+  width: 37vw;
+  height: 20vw;
 }
 
 .birthday-party-pic {
@@ -452,22 +521,27 @@ a {
 .wedding-part-writing,
 .birthday-part-writing,
 .rental-part-writing {
-  font-size: clamp(14px, 2vw, 2.5rem);
-  font-family: var(--font-family);
-  color: var(--section-text-color);
+  font-size: var(--parargraph-font-size);
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-text-color);
+  line-height: var(--paragraph-line-height);
   max-width: min(30%, 20em);
   padding-inline: 7vw;
 }
 
 .section-2-btn {
-  width: max(16vw, 11em);
-  height: max(4vw, 2.5em);
-  font-size: clamp(15px, 3vw, 1.5rem);
-  font-weight: var(--font-weight);
-  color: var(--section-text-color);
-  background-color: var(--btn-color);
+  width: var(--btn-width);
+  height: var(--btn-height);
+  font-family: var(--btn-font);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  color: var(--btn-text-color);
+  background-color: var(--btn-background-color);
   border-radius: 5rem;
   border-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-container {
@@ -484,7 +558,6 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 1em;
-    border-bottom: 1px solid var(--menu-tab-background-color);
     padding-bottom: 10vw;
   }
 
@@ -516,29 +589,28 @@ a {
     margin-bottom: 0;
   }
 }
-/* SECTION 2 END  */
+/* SERVICES SECTION END  */
 
-/* SECTION 3  */
+/* REVIEWS SECTION  */
 /* section-3 -> slider-writing and slider -> slider-right-btn, slider-left-btn, slider-pic, book-btn  */
 
 .section-3 {
-  background-color: black;
-  padding-top: 2em;
+  background-color: var(--background-color);
+  padding-top: 4em;
   padding-bottom: 0.5em;
-  border-block: 1px solid var(--menu-tab-background-color);
+  border-block: 1px solid var(--box-color);
 }
 
 .slider-writing {
   text-align: center;
   font-size: clamp(3vw, 4.5vw, 2.5rem);
-  font-family: var(--font-family);
-  font-weight: var(--font-weight);
-  color: var(--section-text-color);
-  margin-bottom: 1em;
+  font-family: var(--heading-font);
+  font-weight: var(--heading-font-weight);
+  color: var(--heading-text-color);
   margin-inline: auto;
   padding-block: 1vw;
   width: 30%;
-  border: 1px solid var(--menu-tab-background-color);
+  border: 1px solid var(--box-color);
 }
 
 @media screen and (max-width: 1350px) {
@@ -549,14 +621,29 @@ a {
 @media screen and (max-width: 1100px) {
   .slider-writing {
     font-size: clamp(1vw, 4.5vw, 3.5rem);
+    margin-bottom: 1.5em;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .slider-writing {
+    font-size: clamp(1vw, 4.5vw, 3.5rem);
+    margin-bottom: 2em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .slider-writing {
+    font-size: clamp(1vw, 4.5vw, 3.5rem);
+    margin-bottom: 3em;
   }
 }
 
 .slider {
   /* margin-inline: auto; */
   width: 400vw;
-  height: 40vw;
-  margin: 0 auto;
+  height: 30vw;
+  margin: 5vw auto;
   display: flex;
 
   /* -------------------------- */
@@ -567,11 +654,12 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: clamp(17px, 4.5vw, 4rem);
-  font-weight: var(--font-weight);
+  font-size: var(--review-font-size);
+  font-weight: var(--paragraph-font-weight);
   padding-inline: 5vw;
-  background-color: var(--menu-tab-background-color);
-  color: #cccccc;
+  background-color: var(--box-color);
+  color: var(--heading-text-color);
+  font-family: var(--review-font);
   position: relative;
   height: 100%;
   width: 100%;
@@ -583,13 +671,19 @@ a {
   width: max(16vw, 9.5em);
   height: max(4vw, 2.5em);
   font-size: clamp(17px, 4.5vw, 2.5rem);
-  font-weight: var(--font-weight);
-  color: var(--section-text-color);
-  background-color: var(--btn-color);
+  font-family: var(--btn-font);
+  font-weight: var(--btn-font-weight);
+  color: var(--btn-text-color);
+  background-color: var(--btn-background-color);
   border-radius: 5rem;
   border-color: transparent;
   margin-block: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* REVIEWS SECTION END  */
 
 /* FOOTER  */
 /* footer -> footer-logo, phone-number, media-icon-list -> insta-link  */
@@ -600,35 +694,52 @@ a {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-color: black;
-  gap: 1vw;
+  background-color: var(--footer-background-color);
+  gap: 2vw;
 }
 
 .phone-number,
 .email-address {
-  font-size: clamp(1rem, 6vw, 5rem);
-  color: var(--section-text-color);
+  font-size: var(--footer-font-size);
+  color: var(--footer-text-color);
+}
+
+.email-address:hover {
+  opacity: 0.6;
 }
 
 .media-icon-list {
   display: flex;
   justify-content: center;
   list-style: none;
-  color: var(--text-color);
+  gap: 3vw;
+  color: var(--footer-text-color);
 }
 
 .media-icon {
-  font-size: clamp(20%, 8vw, 6rem);
+  font-size: clamp(13px, 5vw, 4rem);
 }
 
-.insta-link {
-  color: var(--text-color);
+.insta-link,
+.email-link {
+  color: var(--footer-text-color);
 }
 
 .footer-logo {
   max-width: 20%;
-  height: 10vw;
+  height: 5vw;
   border-radius: 100%;
+}
+
+/* UTILITY CLASSES  */
+a {
+  color: var(--nav-bar-text-color);
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: underline;
+  opacity: 0.8;
 }
 
 .hidden {
@@ -637,7 +748,7 @@ a {
 }
 
 .unhidden {
-  opacity: 0.8;
+  opacity: var(--nav-bar-opacity);
   transition: 0.5s;
 }
 
@@ -652,3 +763,5 @@ a {
     transition: 0;
   }
 }
+
+/* UTILITY CLASSES END  */

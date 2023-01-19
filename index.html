@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shrikhand&effect=neon">
+    <link rel="stylesheet" type="text/css" href="//db.onlinewebfonts.com/c/0888be1659851f935e4187d97b11c4ab?family=FiendstarCameoW90-Regular" />
     <script
       src="https://kit.fontawesome.com/5d743bbd3f.js"
       crossorigin="anonymous"
@@ -17,9 +19,9 @@
     <div class="nav-bar unhidden">
       <!-- NAV LINK LIST START  -->
       <ul class="nav-link-list">
-        <li class="book-nav-link">
+        <li>
           <a href="https://gswevents2868.setmore.com/" target="_blank"
-            >BOOK NOW</a
+            ><div class="book-nav-link">BOOK NOW</div></a
           >
         </li>
 
@@ -75,14 +77,17 @@
       <!-- PROFILE PICTURE END  -->
 
       <!-- SLOGAN START  -->
-      <div class="slogan">
-        GSW
-        <img src="photos/gsw logo.png" class="slogan-logo" />
-        EVENTS
+      <div class="slogan-container">
+        <div class="slogan">
+          GSW
+          <!-- <img src="photos/gsw logo.png" class="slogan-logo" /> -->
+          EVENTS
+        </div>
+        <!-- <div class="slogan-msg font-effect-neon">YOUR PARTY STARTS HERE</div> -->
+        <!-- SLOGAN END  -->
       </div>
-      <div class="slogan-msg">YOUR PARTY STARTS HERE</div>
-      <!-- SLOGAN END  -->
     </div>
+
     <!-- SECTION 1 END  -->
 
     <!-- ABOUT SECTION  -->
@@ -91,9 +96,7 @@
       <div class="about-content">
         <img class="about-pic" src="photos/Screenshot_20220117-000356.jpg" />
         <p class="about-writing">
-          DJ Gabi is a Manchester based DJ who can brings the Disco to your
-          event. Whether it be a Bar or Bat Mitzvah, Wedding or birthday party
-          we provide it all. With over 5 years of experience and raving reviews,
+          DJ Gabi is a Manchester based DJ who always brings the Disco. With over 5 years of experience and raving reviews,
           you will not be disappointed!
         </p>
       </div>
@@ -179,9 +182,12 @@
         <!-- BIRTHDAY PHOTO END  -->
       </div>
       <div class="btn-container">
-        <button class="birthdays-btn section-2-btn">
-          <a href="mailto:gswevents1@gmail.com" target="_blank">ENQUIRE HERE</a>
-        </button>
+        <a href="mailto:gswevents1@gmail.com" target="_blank">
+        <div class="birthdays-btn section-2-btn">
+          ENQUIRE HERE
+        </div>
+        </a>
+        
       </div>
 
       <!-- BIRTHDAY CONTENT END  -->
@@ -207,11 +213,11 @@
         </div>
       </div>
       <div class="btn-container">
-        <button class="book-btn">
-          <a href="https://gswevents2868.setmore.com/" target="_blank"
-            >BOOK NOW</a
+        <a href="https://gswevents2868.setmore.com/" target="_blank"
+            ><div class="book-btn">
+          BOOK NOW
+        </div></a
           >
-        </button>
       </div>
     </section>
     <!-- SLIDER SECTION END  -->
@@ -223,7 +229,7 @@
     <!-- FOOTER LOGO END -->
     <!-- PHONE NUMBER START  -->
     <div class="phone-number">07879 350 100</div>
-    <div class="email-address">gswevents1@gmail.com</div>
+    <div class="email-address"><a href="mailto:gswevents1@gmail.com" target="_blank">gswevents1@gmail.com</a></div>
     <!-- PHONE NUMBER END -->
     <!-- MEDIA ICONS START  -->
     <ul class="media-icon-list">
@@ -235,6 +241,13 @@
           ><i class="fa-brands fa-instagram"></i
         ></a>
       </li>
+      <li
+        class="email-icon media-icon"
+        ><a class="email link"
+        href="mailto:gswevents1@gmail.com"
+        target="_blank"><i class="fa-solid fa-envelope"></i>
+      </li></a>
+        
     </ul>
     <!-- MEDIA ICONS END -->
   </footer>
