@@ -374,7 +374,7 @@ body {
   }
 
   .profile-pic {
-    margin-bottom: 0;
+    padding-bottom: max(0.5em, 3vw);
   }
 }
 
@@ -393,7 +393,7 @@ body {
 .about-me-heading {
   font-size: var(--heading-font-size);
   text-align: center;
-  margin-bottom: max(0.5em, 3vw);
+  margin-block: max(0.5em, 3vw);
   color: var(--heading-text-color);
   font-weight: var(--heading-font-weight);
   font-family: var(--heading-font);
@@ -436,6 +436,7 @@ body {
   }
   .about-writing {
     max-width: min(80%, 50em);
+    padding-block: 7vw;
   }
 
   .about-pic {
@@ -443,6 +444,7 @@ body {
     width: 30vw;
     height: 40vw;
     padding-left: 3em;
+    padding-block: 7vw;
   }
 }
 
@@ -464,7 +466,8 @@ body {
   font-weight: var(--heading-font-weight);
   font-family: var(--heading-font);
   padding-block: 1vw;
-  margin-bottom: max(0.5em, 3vw);
+  margin-top: 5vw;
+  margin-bottom: 1vw;
   width: 30%;
   margin-inline: auto;
   border: 1px solid var(--box-color);
@@ -492,7 +495,7 @@ body {
   align-items: center;
   justify-content: space-around;
   gap: 2vw;
-  padding-block: 4vw 8vw;
+  padding-block: 3vw 8vw;
   border-bottom: 1px solid var(--box-color);
 }
 
@@ -557,7 +560,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 3em;
     padding-bottom: 10vw;
   }
 
@@ -569,7 +572,9 @@ body {
   .wedding-part-writing,
   .birthday-part-writing,
   .rental-part-writing {
-    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
     max-width: min(80%, 50em);
   }
 
