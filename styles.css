@@ -313,7 +313,7 @@ body {
   object-fit: cover;
   height: var(--profile-pic-height);
   width: var(--profile-pic-width);
-  margin-bottom: 2em;
+  margin-bottom: 6em;
 }
 
 .slogan-container {
@@ -348,6 +348,15 @@ body {
   width: 100%;
   text-shadow: 2px 2px 0 var(--slogan-msg-shadow-color);
   animation: flicker 1.5s infinite alternate;
+}
+
+.list-of-equipment {
+  font-size: clamp(25px, 5vw, 4rem);
+  color: white;
+  list-style: none;
+  line-height: 1em;
+  text-align: center;
+  text-shadow: 2px 2px 0 black;
 }
 
 .slogan-logo {
@@ -398,6 +407,7 @@ body {
   font-weight: var(--heading-font-weight);
   font-family: var(--heading-font);
   padding-block: 1vw;
+  padding-inline: 3vw;
   width: 30%;
   margin-inline: auto;
   border: 1px solid var(--box-color);
@@ -411,6 +421,7 @@ body {
   gap: 2vw;
   background: var(--background-color);
   padding-bottom: min(1.2rem, 4vw);
+  margin-inline: auto;
 }
 
 .about-pic {
@@ -425,7 +436,7 @@ body {
   font-family: var(--paragraph-font);
   color: var(--paragraph-text-color);
   line-height: var(--paragraph-line-height);
-  max-width: min(50%, 40em);
+  max-width: min(50%, 25em);
   padding-inline: 2vw;
 }
 
@@ -469,6 +480,7 @@ body {
   margin-top: 5vw;
   margin-bottom: 1vw;
   width: 30%;
+  padding-inline: 3vw;
   margin-inline: auto;
   border: 1px solid var(--box-color);
 }
@@ -476,7 +488,7 @@ body {
 .section-2-heading {
   font-size: var(--sub-heading-font-size);
   text-align: left;
-  margin-top: max(0.5em, 3vw);
+  margin-top: max(2.5em, 3vw);
   margin-bottom: max(0.5em, 3vw);
   color: var(--sub-heading-text-color);
   font-weight: var(--sub-heading-font-weight);
@@ -592,6 +604,7 @@ body {
 
   .services-heading {
     margin-bottom: 0;
+    margin-top: 2em;
   }
 }
 /* SERVICES SECTION END  */
