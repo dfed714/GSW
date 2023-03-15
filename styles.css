@@ -1,6 +1,14 @@
 /* COLOR AND FONT ROOT  */
 :root {
   --background-color: black;
+  --fs-slogan: clamp(40px, 5vw, 4.5rem);
+  --fs-l: clamp(26px, 3.5vw, 3.5rem);
+  --fs-m: clamp(20px, 2.25vw, 2rem);
+  --fs-s: clamp(16px, 1.5vw, 1.25rem);
+  --fs-para: clamp(16px, 1.25vw, 1.5rem);
+  --fw-thick: 800;
+  --fw-medium: 600;
+  --fw-thin: 300;
 
   /* NAV-BAR */
   --nav-bar-background-color: rgb(0, 0, 0);
@@ -29,7 +37,7 @@
   /* HOME PAGE */
   --home-page-background-color: black;
   --profile-pic-height: 100vh;
-  --profile-pic-width: 80%;
+  --profile-pic-width: 90%;
   --slogan-font: "Shrikhand";
   --slogan-font-size: clamp(45px, 10vw, 9rem);
   --slogan-color: white;
@@ -117,6 +125,25 @@ body {
   }
 }
 
+@keyframes slide-left {
+  from {
+    margin-right: -1000px;
+  }
+
+  to {
+    margin-right: 0px;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 /* END OF GENERAL STYLING  */
 
 .display-none {
@@ -200,8 +227,9 @@ body {
     right: max(5px, 2%);
     color: var(--nav-bar-text-color);
     z-index: 3;
+    margin-right: 2vw;
   }
-
+  
   .mobile-nav-book-btn {
     z-index: 3;
     padding: 0.75em;
@@ -215,6 +243,7 @@ body {
     position: fixed;
     left: max(5px, 2%);
     top: clamp(2px, 2vw, 1em);
+    margin-left: 3vw;
   }
 
   @media screen and (max-width: 450px) {
@@ -259,6 +288,7 @@ body {
   height: var(--menu-tab-height);
   background-color: var(--menu-tab-background-color);
   z-index: 3;
+  animation: 500ms slide-left ease-out;
 }
 
 .menu-tab-contents {
@@ -280,6 +310,7 @@ body {
   font-family: var(--menu-tab-font);
   font-weight: var(--menu-tab-font-weight);
   z-index: 3;
+  animation: 500ms slide-left ease-out;
 }
 
 .menu-tab-contents > li {
@@ -294,6 +325,7 @@ body {
   font-size: var(--x-out-btn-font-size);
   color: var(--menu-tab-text-color);
   z-index: 4;
+  animation: 750ms fade-in ease-in;
 }
 
 /* HOME PAGE START  */
@@ -311,7 +343,7 @@ body {
 
 .profile-pic {
   object-fit: cover;
-  height: var(--profile-pic-height);
+  height: calc(var(--profile-pic-height) + 10vh);
   width: var(--profile-pic-width);
   margin-bottom: 6em;
 }
@@ -325,6 +357,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 10vh;
 }
 
 .slogan {
@@ -365,12 +398,11 @@ body {
   height: var(--slogan-logo-height);
 }
 
+#section-2, #about {
+  scroll-margin-top: 10vh;
+}
+
 @media screen and (max-width: 1100px) {
-  #section-2,
-  #about,
-  #reviews {
-    scroll-margin-top: 10vw;
-  }
 
   .slogan {
     z-index: 1;
@@ -505,7 +537,8 @@ body {
 .rentals-part {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-inline: 5%;
   gap: 2vw;
   padding-block: 3vw 8vw;
   border-bottom: 1px solid var(--box-color);
@@ -557,6 +590,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-duration: 250ms;
 }
 
 .btn-container {
@@ -699,6 +733,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-duration: 250ms;
 }
 
 /* REVIEWS SECTION END  */
@@ -714,6 +749,7 @@ body {
   width: 100%;
   background-color: var(--footer-background-color);
   gap: 2vw;
+  margin-bottom: 20vh;
 }
 
 .phone-number,
@@ -744,8 +780,8 @@ body {
 }
 
 .footer-logo {
-  max-width: 20%;
   height: 5vw;
+  aspect-ratio: 1/1;
   border-radius: 100%;
 }
 
@@ -783,3 +819,148 @@ a {
 }
 
 /* UTILITY CLASSES END  */
+
+/* BANNER  */
+
+.banner {
+  display: grid;
+  place-items: center;
+  padding-block: 12.5vw;
+  color: white;
+  gap: 2em;
+  background: black;
+  font-family: "Shrikhand";
+  scroll-margin-top: -6.25vw;
+  height: fit-content;
+  border-bottom: 1px solid var(--box-color);
+}
+
+.banner h1 {
+  font-size: var(--fs-l);
+  text-align: center;
+}
+
+.banner h2 {
+  font-size: var(--fs-m);
+  font-weight: var(--fw-thin);
+  text-align: center;
+}
+
+.banner button {
+  border: 2px solid white;
+  color: white;
+}
+
+.banner button:hover, .banner button:active {
+  background: white;
+  color: black;
+}
+
+.form {
+  margin-top: 2vw;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 850px) {
+  .form {
+      width: 75%;
+  }
+}
+
+.form label {
+  color: white;
+  font-size: var(--fs-s);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  font-weight: var(--fw-thin);
+}
+
+.form input, .form textarea {
+  background: transparent;
+  border: none;
+  border-radius: 0%;
+  border-bottom: 1px solid white;
+  font-size: var(--fs-s);
+  color: white;
+  font-weight: var(--fw-thin);
+  padding-block: 0.5em;
+  font-family: sans-serif;
+}
+
+.form input:focus, .form textarea:focus {
+  outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 1000s ease-in-out 0s;
+  -webkit-text-fill-color: white !important;
+}
+
+.contact-s1, .contact-s2 {
+  display: flex;
+  gap: 5vw;
+}
+
+#email-box {
+  width: 200%;
+}
+
+#msg-box {
+  width: 200%;
+  resize: none;
+}
+
+.form button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-inline: 2.5em; 
+  margin-top: 1em;
+}
+
+@media only screen and (max-width: 500px) {
+  .contact-s1, .contact-s2 {
+      flex-direction: column;
+  }
+
+  .form label {
+      width: 100%;
+  }
+
+  #email-box {
+      width: 100%;
+  }
+  
+  #msg-box {
+      width: 100%;
+  }
+}
+
+.form-button {
+  border: 2px solid black;
+  color: black;
+  background-color: transparent;
+  font-size: var(--fs-s);
+  padding: 1em;
+  font-family: "Shrikhand";
+  cursor: pointer;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in;
+  transition-property: background-color, color;
+  border-radius: 5rem;
+}
+
+.banner h2 a:hover {
+  color: #9b63c3;
+}
+
+.section-2-btn:hover, .book-btn:hover {
+  opacity: 0.5;
+}

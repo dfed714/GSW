@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="DJ and Party Equipment Services">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" type="text/css"/>
+    <link rel="icon" type="image/x-icon" href="/photos/gsw-logo.webp">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shrikhand|Sofia Sans&effect=neon">
     <script
       src="https://kit.fontawesome.com/5d743bbd3f.js"
       crossorigin="anonymous" defer async
     ></script>
-    <title>GSW Events</title>
     <script class="js" src="script.js" defer async></script>
+    <title>GSW Events</title>
   </head>
   <body>
     <!-- NAV BAR SECTION START -->
@@ -41,13 +42,13 @@
       <!-- NAV LINK LIST END  -->
 
       <!-- TOP LOGO START  -->
-      <img class="nav-bar-logo" src="photos/gsw logo.png" alt="DJ Logo" />
+      <img class="nav-bar-logo" src="photos/gsw-logo.webp" alt="DJ Logo" />
       <!-- TOP LOGO END  -->
     </div>
     <div class="mobile-nav-book-btn">
       <a href="https://gswevents2868.setmore.com/" target="_blank" aria-label="Book Now Button">BOOK NOW</a>
     </div>
-    <img class="mobile-logo" src="photos/gsw logo.png" alt="DJ Logo"/>
+    <img class="mobile-logo" src="photos/gsw-logo.webp" alt="DJ Logo"/>
     <div class="hamburger-icon"><i class="fa-solid fa-bars"></i></div>
 
     <!-- NAV BAR SECTION END -->
@@ -70,7 +71,7 @@
     <div class="section-1-content">
       <!-- PROFILE PICTURE START  -->
       <img
-        src="photos/promo pic of party.png"
+        src="photos/promo-pic-of-party.webp"
         class="profile-pic"
         alt="Picture DJ Set Up"
       />
@@ -80,7 +81,7 @@
       <div class="slogan-container">
         <div class="slogan">
           GSW
-          <!-- <img src="photos/gsw logo.png" class="slogan-logo" /> -->
+          <!-- <img src="photos/gsw logo.webp" class="slogan-logo" /> -->
           EVENTS
         </div>
         <!-- <div class="slogan-msg font-effect-neon">YOUR PARTY STARTS HERE</div> -->
@@ -103,7 +104,7 @@
     <section id="about" class="about-me-section">
       <h1 class="about-me-heading">ABOUT ME</h1>
       <div class="about-content">
-        <img class="about-pic" src="photos/gabi-photo.jpg" alt="Picture of DJ Gabi"/>
+        <img class="about-pic" src="photos/gabi-photo.webp" alt="Picture of DJ Gabi"/>
         <p class="about-writing">
           DJ Gabi is a Manchester based DJ who always brings the Disco. With over 5 years of experience and raving reviews,
           you will not be disappointed!
@@ -132,7 +133,7 @@
 
         <!-- RENTALS PHOTO START  -->
         <img
-          src="photos/pink-equipment.jpg"
+          src="photos/pink-equipment.webp"
           class="rental-pic"
           alt="Audio and Light Equipment"
           loading="lazy"
@@ -158,7 +159,7 @@
 
         <!-- WEDDING PHOTO START  -->
         <img
-          src="photos/wedding-photo.jpg"
+          src="photos/wedding-photo.webp"
           class="wedding-party-pic"
           alt="Wedding Party Photo"
           loading="lazy"
@@ -183,7 +184,7 @@
         <!-- BIRTHDAY WRITING END  -->
         <!-- BIRTHDAY PHOTO START  -->
         <img
-          src="photos/purim-pic.jpg"
+          src="photos/purim-pic.webp"
           class="birthday-party-pic"
           alt="Birthday Party Photo"
           loading="lazy"
@@ -230,11 +231,44 @@
       </div>
     </section>
     <!-- SLIDER SECTION END  -->
+
+    <section class="banner" id="contact-section">
+      <h1>Get In Touch Now</h1>
+      <h2>We would love to hear from you</h2>
+      <h2>Email: <a href="mailto:gswevents1@gmail.com" target="_blank" aria-label="Button to send an email to us">gswevents1@gmail.com</a></h2>
+      
+       <!-- CONTACT FORM  -->
+
+  <form class="form" name="KFM-Contact-Form" method="POST" data-netlify="true" onSubmit="submit" action="/formSubmit/index.html">
+      <p class="contact-s1">
+          <label>First Name * <input type="text" name="first-name" required/></label>
+          <label>Last Name *<input type="text" name="last-name" required/></label>
+      </p>
+
+      <p class="contact-s2">
+          <label>Company <input type="text" name="company" /></label>
+          <label>Phone Number *<input type="tel" name="tel" required/></label>
+      </p>
+
+      <p>
+          <label>Email *<input id="email-box" type="email" name="email" required/></label>
+      </p>
+
+      <p>
+          <label>Message *<br><textarea type="text" id="msg-box" name="message" required></textarea>
+      </p>
+
+      <p>
+        <button class="form-button" type="submit">Send</button>
+      </p>
+    </form>
+  
+  </section>
   </body>
   <!-- FOOTER SECTION START  -->
   <footer id="contact" class="footer">
     <!-- FOOTER LOGO START  -->
-    <img class="footer-logo" src="photos/gsw logo.png" alt="Logo" />
+    <img class="footer-logo" src="photos/gsw-logo.webp" alt="Logo" />
     <!-- FOOTER LOGO END -->
     <!-- PHONE NUMBER START  -->
     <div class="phone-number">+44 7879 350 100</div>
